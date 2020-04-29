@@ -19,13 +19,13 @@
     }
     
     #production{
-       flex:2;
-    
+        flex:2;
+        overflow-y: scroll;
         height: 100vh;
         min-width: 500px;
 
         
-        background-image: url("../../assets/images/panel-vertical.png");
+  
         background-repeat: repeat-y;       
     }                  
     
@@ -33,3 +33,7 @@
         flex:1;
     }
     
+    .separator{
+     width: 1rem;
+     background-image: url('../../assets/images/panel-vertical.png');
+    }
