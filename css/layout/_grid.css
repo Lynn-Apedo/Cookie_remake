@@ -23,38 +23,22 @@
         flex:2;
         overflow-y: scroll;
         height: 100vh;
-        min-width: 500px;
-        background-repeat: repeat-y;       
-        background-image: linear-gradient(circle, transparent 0%, rgba(0,0,0,0.5) 80%) ;
+        min-width: 500px;   
+        background: linear-gradient( rgba(0,0,0,0.5), transparent 100%);
     
     }  
     
     
-       
-   
-    
     #store{
-        flex:1;
-        display: grid;
-        background-image: radial-gradient(circle, transparent 0%, rgba(0,0,0,0.5) 100%);
-    
+        min-width: 150px;
+        max-width: 300px;
     }
-      
 
      #buildings{
-        background-color: red;
-        border-top: 16px solid transparent;
-        border-image: url(../../assets/images/panel-horizontal.png) 16 round;
+
+        background:url(../../assets/images/panel-horizontal.png) no-repeat top / cover ;
+      
        
-    } 
-
-     
-    .separator{
-     
-     width: 1rem;
-     background-image: url('../../assets/images/panel-vertical.png');
-    }
-
     hr{
         height: 1rem;
     
