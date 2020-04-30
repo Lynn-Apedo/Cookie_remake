@@ -10,7 +10,6 @@
 
     #bakery{
       flex:1;
-      
       height: 100vh;
       min-width: 250px;
       max-width: 400px;
@@ -25,9 +24,6 @@
         overflow-y: scroll;
         height: 100vh;
         min-width: 500px;
-        
-        
-  
         background-repeat: repeat-y;       
     }  
     
@@ -38,11 +34,7 @@
     
     #store{
         flex:1;
-        
         display: grid;
-
-        
-        
         background-image: radial-gradient(circle, transparent 0%, rgba(0,0,0,0.5) 100%);
     
     }
@@ -51,7 +43,6 @@
      #buildings{
      
         border-top: 16px solid transparent;
-      
         border-image: url(../../assets/images/panel-horizontal.png) 16 round;
        
     } 
