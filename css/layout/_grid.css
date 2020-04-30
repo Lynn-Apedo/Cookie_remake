@@ -39,12 +39,9 @@
         background:url(../../assets/images/panel-horizontal.png) no-repeat top / cover ;
       
        
-    hr{
-        height: 1rem;
     
         margin-top: 15px;
 
-        background-image: url('../../assets/images/panel-horizontal.png');
-    }
+     }
 
     
