@@ -41,7 +41,7 @@
       
 
      #buildings{
-     
+        background-color: red;
         border-top: 16px solid transparent;
         border-image: url(../../assets/images/panel-horizontal.png) 16 round;
        
