@@ -1,28 +1,42 @@
+
+#cookies{
+  display: flex;
+  flex-direction: column;
+
+align-items: center;
+justify-content: center;
+height: 200px;
+}
+
+
+
+
 #cookiesStock {
-  position: absolute;
-  width: 200px;
+
+  width: 100%;
   text-align: center;
   background: rgba(0, 0, 0, 0.4);
-  border-radius: 12px;
-  margin: 20px 90px;
+ 
+  font-size: 1.2rem;
+
 }
 #cookiesPerSecond{
   top: 120px;
-  position: absolute;
+
   width: 390px;
   text-align: center;
   cursor: pointer;
   background: rgba(0, 0, 0, 0.4);
-  padding: 6px 0px;
+
 }
 #bigCookie{
-    margin: 180px 60px;
-    background-image: url("../../assets/images/perfect-cookie.png");
-    background-size: 250px;
-    height: 255px;
-    width: 255px;    
-    border: 2px solid rgb(248, 226, 226);
-    border-radius: 150px; 
+  background: url(../../assets/images/perfect-cookie.png) no-repeat center,radial-gradient(circle, rgba(255,255,255,1) 0%, transparent 100%) no-repeat center 100% ;
+  background-size: 250px;
+  height: 300px;
+  width: 100%;
+  /* background-color: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%); */
+
+  border: 2px solid rgb(248, 226, 226);
 } 
 
 #bigCookie:hover {
@@ -50,28 +64,28 @@
     
   @-webkit-keyframes neon1 {
     from {
-      text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #228DFF, 0 0 7px #228DFF, 0 0 8px #228DFF, 0 0 5px #228DFF, 0 0 15px #228DFF;
+      text-shadow: 0 0 1px rgba(255, 255, 255, 0.4), 0 0 2px rgba(255, 255, 255, 0.4), 0 0 3px rgba(255, 255, 255, 0.4), 0 0 4px #228DFF, 0 0 7px #228DFF, 0 0 8px #228DFF, 0 0 5px #228DFF, 0 0 15px #228DFF;
       }
       to {
-      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 50px #228DFF, 0 0 4px #228DFF, 0 0 5px #228DFF, 0 0 7px #228DFF;
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.4), 0 0 10px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 255, 255, 0.4), 0 0 20px #228DFF, 0 0 50px #228DFF, 0 0 4px #228DFF, 0 0 5px #228DFF, 0 0 7px #228DFF;
     }
   }    
     
   @-moz-keyframes neon1 {
     from {
-      text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #228DFF, 0 0 7px #228DFF, 0 0 8px #228DFF, 0 0 5px #228DFF, 0 0 15px #228DFF;
+      text-shadow: 0 0 1px rgba(255, 255, 255, 0.4), 0 0 2px rgba(255, 255, 255, 0.4), 0 0 3px rgba(255, 255, 255, 0.4), 0 0 4px #228DFF, 0 0 7px #228DFF, 0 0 8px #228DFF, 0 0 5px #228DFF, 0 0 15px #228DFF;
       }
       to {
-      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 50px #228DFF, 0 0 4px #228DFF, 0 0 5px #228DFF, 0 0 7px #228DFF;
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.4), 0 0 10px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 255, 255, 0.4), 0 0 20px #228DFF, 0 0 50px #228DFF, 0 0 4px #228DFF, 0 0 5px #228DFF, 0 0 7px #228DFF;
     }
       
   }
   @keyframes neon1 {
     from {
-      text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #228DFF, 0 0 7px #228DFF, 0 0 8px #228DFF, 0 0 5px #228DFF, 0 0 15px #228DFF;
+      text-shadow: 0 0 1px rgba(255, 255, 255, 0.4), 0 0 2px rgba(255, 255, 255, 0.4), 0 0 3px rgba(255, 255, 255, 0.4), 0 0 4px #228DFF, 0 0 7px #228DFF, 0 0 8px #228DFF, 0 0 5px #228DFF, 0 0 15px #228DFF;
       }
       to {
-      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 50px #228DFF, 0 0 4px #228DFF, 0 0 5px #228DFF, 0 0 7px #228DFF;
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.4), 0 0 10px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 255, 255, 0.4), 0 0 20px #228DFF, 0 0 50px #228DFF, 0 0 4px #228DFF, 0 0 5px #228DFF, 0 0 7px #228DFF;
     }
   }
 
