@@ -1,0 +1,79 @@
+#cookiesStock {
+  position: absolute;
+  width: 200px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  margin: 20px 90px;
+}
+#cookiesPerSecond{
+  top: 120px;
+  position: absolute;
+  width: 390px;
+  text-align: center;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 6px 0px;
+}
+#bigCookie{
+    margin: 180px 60px;
+    background-image: url("../../assets/images/perfect-cookie.png");
+    background-size: 250px;
+    height: 255px;
+    width: 255px;    
+    border: 2px solid rgb(248, 226, 226);
+    border-radius: 150px; 
+    
+ 
+} 
+
+#bigCookie:hover {
+    cursor: pointer;
+    transform: scale(1.1,1.1);
+    transition: all 0.5s;   
+    border-width: 5px 5px; 
+   
+}
+
+
+  /* KEYFRAMES COLORS BAKERY and NEON */
+  
+ 
+  #bakery:nth-child(1) h2 {
+    color: white;
+    transition: 0.2s;
+  }
+    
+  #bakery:nth-child(1) h2{
+    -webkit-animation: neon1 1.2s ease-in-out infinite alternate;
+    -moz-animation: neon1 1.2s ease-in-out infinite alternate;
+    animation: neon1 1.2s ease-in-out infinite alternate;
+  }
+    
+  @-webkit-keyframes neon1 {
+    from {
+      text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #228DFF, 0 0 7px #228DFF, 0 0 8px #228DFF, 0 0 5px #228DFF, 0 0 15px #228DFF;
+      }
+      to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 50px #228DFF, 0 0 4px #228DFF, 0 0 5px #228DFF, 0 0 7px #228DFF;
+    }
+  }    
+    
+  @-moz-keyframes neon1 {
+    from {
+      text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #228DFF, 0 0 7px #228DFF, 0 0 8px #228DFF, 0 0 5px #228DFF, 0 0 15px #228DFF;
+      }
+      to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 50px #228DFF, 0 0 4px #228DFF, 0 0 5px #228DFF, 0 0 7px #228DFF;
+    }
+      
+  }
+  @keyframes neon1 {
+    from {
+      text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #228DFF, 0 0 7px #228DFF, 0 0 8px #228DFF, 0 0 5px #228DFF, 0 0 15px #228DFF;
+      }
+      to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 50px #228DFF, 0 0 4px #228DFF, 0 0 5px #228DFF, 0 0 7px #228DFF;
+    }
+  }
+

@@ -1,8 +1,10 @@
 #game {
     display:flex; 
     justify-content: space-between;
+    
+    padding-top: 15px; 
 
-    padding-top: 15px;
+    background-image: radial-gradient(circle, transparent 0%, rgba(0,0,0,0.5) 100%)
     
     }
 
@@ -15,7 +17,7 @@
       
 
       
-      background-image: radial-gradient(circle, transparent 0%, rgba(0,0,0,0.5) 100%), url("../../assets/images/bg-blue.jpg");
+      background-image: radial-gradient(circle, transparent 0%, rgba(0,0,0,0.5) 100%);
     }
     
     #production{
@@ -23,17 +25,50 @@
         overflow-y: scroll;
         height: 100vh;
         min-width: 500px;
-
+        
         
   
         background-repeat: repeat-y;       
-    }                  
+    }  
+    
+    #production h2 {
+
+        background-image: radial-gradient(circle, transparent 0%, rgba(0,0,0,0.5) 80%)
+    }
     
     #store{
         flex:1;
-    }
+        
+        display: grid;
+
+        
+        
+        background-image: radial-gradient(circle, transparent 0%, rgba(0,0,0,0.5) 100%);
     
+    }
+      
+
+     #buildings{
+     
+        border-top: 16px solid transparent;
+      
+        border-image: url(../../assets/images/panel-horizontal.png) 16 round;
+       
+    } 
+
+     
     .separator{
+     
      width: 1rem;
      background-image: url('../../assets/images/panel-vertical.png');
     }
+
+    hr{
+        height: 1rem;
+    
+        margin-top: 15px;
+
+        background-image: url('../../assets/images/panel-horizontal.png');
+    }
+
+    
