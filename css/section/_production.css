@@ -1,0 +1,17 @@
+#production{
+    flex:2;
+    overflow-y: scroll;
+    height: 100vh;
+    min-width: 500px;   
+    background: linear-gradient( rgba(0,0,0,0.4), transparent 100%);
+
+} 
+
+
+
+hr{
+    margin-top: 15px;
+     height: 1rem;
+     background: url(../../assets/images/panel-horizontal.png); 
+    
+    }

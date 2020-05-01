@@ -31,5 +31,22 @@ h2{
 
 }
 
+.separator{
+    width: 1rem;
+    
+    background: url(../../assets/images/panel-vertical.png);    
+    }
+
+
+#game {
+    
+    display:flex; 
+    justify-content: space-between;
+        
+    padding-top: 15px; 
+    
+    background-image: radial-gradient(circle, transparent 0%, rgba(0,0,0,0.5) 100%)
+        
+        }
 
 

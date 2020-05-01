@@ -1,3 +1,7 @@
-@import "./base/_base.css";
-@import "./layout/_grid.css";
-@import "./components/_bakery.css";
+@import "./base/_base.css";  /* body police de base , element de base,  sectionS*/
+
+@import "./section/_bakery.css";/* section bakery */
+
+@import "./section/_production.css";/* section production */
+
+@import "./section/_store.css";/* section store */
