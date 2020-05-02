@@ -72,10 +72,15 @@ cursor: url(../../assets/images/cursor.png), auto;
   position: relative;
   left: -30px;
 } 
+
+.cost::before{
+    content: '1 ';
+    background-image: url(../../assets/images/money.png); 
+    }
                                        
 .cost{
     
-    background-image: url(../../assets/images/money.png);
+    
     background-repeat: no-repeat;
     background-position: 120px;
     position: relative;
@@ -83,24 +88,65 @@ cursor: url(../../assets/images/cursor.png), auto;
     /* top: 20px; */
     bottom: 6px;
 } 
+
+.display_icon_cost{
+
+    display: flex;
+    flex-direction: column;
+}
+
                                                 /* Fond : money.png
                                             La taille du texte est proportionnelle à 0.7 fois la taille de référence
                                             Le texte est vert (#66ff66) par défaut
                                             Lorsque la tuile est désactivée (classe .disabled) le texte est corail (#ff6666) */
-.disabled .cost{
+/* .disabled .cost{
     color: #ff6666 ;
 }
  .name .cost{
     text-shadow: 0px 0px 6px #000, 0px 1px 1px #000;
-} */
+}  */
                                             /* Le texte est gras
                                         Deux ombres :
                                         une ombre de couleur noir (#000000) avec aucun offset et un blur-radius de 4px
                                         une ombre de couleur noir (#000000) avec aucun offset-x, un offset-y de 1px et un blur-radius de 4px */
-/* .number{
+.number{
 
+    width: 4%;
+    height: 12%;
+    border: 2px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    height: 10%;
+} 
 
-} */
+#building-cursor .number{
+    position: absolute;
+    right:0;
+    top:90px;
+}
+#building-grandma .number{
+    position: absolute;
+    right:0;
+    top:155px;
+}
+#building-farm .number{
+    position: absolute;
+    right:0;
+    top:220px;
+}
+#building-mine .number{
+    position: absolute;
+    right:0;
+    top:285px;
+}
+#building-factory .number{
+    position: absolute;
+    right:0;
+    top:350px;
+}
+
 
 
 
