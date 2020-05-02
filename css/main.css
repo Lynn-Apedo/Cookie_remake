@@ -5,3 +5,5 @@
 @import "./section/_production.css";/* section production */
 
 @import "./section/_store.css";/* section store */
+
+@import "./state/_buildingState.css"; /* etat des tuiles 

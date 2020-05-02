@@ -1,0 +1,81 @@
+
+
+/* 
+* Là aussi, pas question d’ajouter du HTML pour y parvenir. C’est le moment d’apprendre à utiliser des techniques CSS 
+un peu plus avancées, le pseudo-élément ::after est un ami. */
+
+
+
+
+
+
+
+
+.locked{
+    /* store-tile.jpg
+Lorsqu’une tuile est bloquée (classe .locked) la silhouette de l’icône est affichée
+
+
+
+
+*/
+}
+
+.unlocked{
+    
+
+}
+
+.enabled{
+
+}
+
+.disabled{
+
+    /* Lorsqu’une tuile est désactivée (classe .disabled) :
+    Le texte du coût du bâtiment est de couleur corail (#ff6666)
+    L’image de fond de la tuile est assombri
+     */
+}
+
+
+
+.icon{
+
+}
+
+.name{
+    /* La taille du texte est proportionnelle à 1.3 fois la taille de référence */
+}
+
+.cost{
+
+    /* Fond : money.png
+La taille du texte est proportionnelle à 0.7 fois la taille de référence
+Le texte est vert (#66ff66) par défaut
+Lorsque la tuile est désactivée (classe .disabled) le texte est corail (#ff6666) */
+
+}
+
+.name .cost{
+    /* Le texte est gras
+Deux ombres :
+une ombre de couleur noir (#000000) avec aucun offset et un blur-radius de 4px
+une ombre de couleur noir (#000000) avec aucun offset-x, un offset-y de 1px et un blur-radius de 4px */
+
+}
+
+.number{
+
+
+}
+
+
+
+/* Au survol d’une tuile une ombre intérieure blanche (#ffffff) avec aucun offset, un blur-radius de 15px et un spread-radius de 3px.
+
+Une transition douce entre les différents états (normal, survol, actif) est souhaitable.
+
+
+ */
+

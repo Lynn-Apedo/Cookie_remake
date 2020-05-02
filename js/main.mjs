@@ -46,7 +46,7 @@ addTuil(1);//ajoute la tuile Grandmere au html
 
 
 
-
+/*AJOUT DES CLASSES VOiR CAHIER DES CHARCHES B. Les règles de l’interface ++ document css = > css/state/_buildingState.css*/
 
 
 
