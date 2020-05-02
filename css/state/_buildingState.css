@@ -2,8 +2,12 @@
 un peu plus avancées, le pseudo-élément ::after est un ami.  */
 
 
+#buildings > * {
+background-image: url(../../assets/images/store-tile.jpg) ;
 
+cursor: pointer;
 
+}
 
 
 
@@ -15,12 +19,14 @@ un peu plus avancées, le pseudo-élément ::after est un ami.  */
                                         Lorsqu’une tuile est bloquée (classe .locked) la silhouette de l’icône est affichée
 
                                         */
-/* .unlocked{
+/* 
+.unlocked{
     
 
 } */
 
-/*.enabled{
+/*
+.enabled{
 
 } */
 /* 
@@ -34,11 +40,13 @@ un peu plus avancées, le pseudo-élément ::after est un ami.  */
 
 
 
-/* .icon{
+/* 
+.icon{
 
 } */
 
-/* .name{
+/* 
+.name{
   
 } */
                                         /* La taille du texte est proportionnelle à 1.3 fois la taille de référence */
