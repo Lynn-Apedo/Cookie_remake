@@ -3,6 +3,8 @@ un peu plus avancées, le pseudo-élément ::after est un ami.  */
 
 
 #buildings > * {
+
+
 background-image: url(../../assets/images/store-tile.jpg) ;
 
 cursor: pointer;
@@ -15,21 +17,12 @@ cursor: pointer;
 .locked{
  
 } 
-                                        /* store-tile.jpg
+                                        /* 
                                         Lorsqu’une tuile est bloquée (classe .locked) la silhouette de l’icône est affichée
 
                                         */
 /* 
-.unlocked{
-    
 
-} */
-
-/*
-.enabled{
-
-} */
-/* 
 .disabled{
 
 } */
@@ -38,6 +31,24 @@ cursor: pointer;
                                         L’image de fond de la tuile est assombri
                                         */
 
+/* .locked .disabled { 
+
+
+}
+
+
+.unlocked{
+    
+
+}  */
+
+/*
+.enabled{
+
+} */
+/* 
+
+
 
 
 /* 
@@ -45,11 +56,11 @@ cursor: pointer;
 
 } */
 
-/* 
+
 .name{
-  
-} */
-                                        /* La taille du texte est proportionnelle à 1.3 fois la taille de référence */
+  font-size: 1.3rem;
+} 
+                                       
                                         /* .cost{
 
 } */
