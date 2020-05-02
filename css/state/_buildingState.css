@@ -7,7 +7,7 @@ un peu plus avancées, le pseudo-élément ::after est un ami.  */
 
 background-image: url(../../assets/images/store-tile.jpg) ;
 
-cursor: pointer;
+cursor: url(../../assets/images/cursor.png), auto;
 
 }
 
@@ -46,39 +46,58 @@ cursor: pointer;
 .enabled{
 
 } */
-/* 
 
 
 
 
-/* 
+
+
 .icon{
 
-} */
-
-
+    position: absolute;
+    width: 4.5%;
+    height: 8%;
+    background-position-x: 34%;
+    background-position-y: -0.5%;
+    background-image: url(../../assets/images/buildings.png);
+    background-repeat: no-repeat;
+    background-size: 205px;
+    margin-left: 1%;
+    margin-top: 2px;
+  
+  
+}
 .name{
   font-size: 1.3rem;
+  position: relative;
+  left: -30px;
 } 
                                        
-                                        /* .cost{
-
-} */
+.cost{
+    
+    background-image: url(../../assets/images/money.png);
+    background-repeat: no-repeat;
+    background-position: 120px;
+    position: relative;
+    left: -35px;
+    /* top: 20px; */
+    bottom: 6px;
+} 
                                                 /* Fond : money.png
                                             La taille du texte est proportionnelle à 0.7 fois la taille de référence
                                             Le texte est vert (#66ff66) par défaut
                                             Lorsque la tuile est désactivée (classe .disabled) le texte est corail (#ff6666) */
-
-
-/* .name .cost{
-
-
+.disabled .cost{
+    color: #ff6666 ;
+}
+ .name .cost{
+    text-shadow: 0px 0px 6px #000, 0px 1px 1px #000;
 } */
                                             /* Le texte est gras
                                         Deux ombres :
                                         une ombre de couleur noir (#000000) avec aucun offset et un blur-radius de 4px
                                         une ombre de couleur noir (#000000) avec aucun offset-x, un offset-y de 1px et un blur-radius de 4px */
-                                        /* .number{
+/* .number{
 
 
 } */
