@@ -33,12 +33,13 @@ console.log(buildings[0].name);
 
 
 function addTuil(number) {
-    buildings_container.innerHTML += '<div id="building-'+buildings[number].name.toLowerCase()+'" class="locked disabled">' // L’id doit toujours être préfixé par building- et le nom du bâtiment doit être en minuscule.
-                                                  +'<div class="icon"></div>'
-                                                  +'<div class="name">'+ buildings[number].name +'</div>'//Dans la div avec la classe .name, le nom du bâtiment de production est affiché dynamiquement.
-                                                  +'<div class="cost">'+ buildings[number].cost +'</div>'//Dans la div avec la classe .cost, le coût du bâtiment de production est affiché dynamiquement.
-                                                  +'<div class="number"></div>'
-                                                  +'</div> '
+    buildings_container.innerHTML += 
+    '<div id="building-'+buildings[number].name.toLowerCase()+'" class="locked disabled">' // L’id doit toujours être préfixé par building- et le nom du bâtiment doit être en minuscule.
+    +'<div class="icon"></div>'
+    +'<div class="name">'+ buildings[number].name +'</div>'//Dans la div avec la classe .name, le nom du bâtiment de production est affiché dynamiquement.
+    +'<div class="cost">'+ buildings[number].cost +'</div>'//Dans la div avec la classe .cost, le coût du bâtiment de production est affiché dynamiquement.
+    +'<div class="number"></div>'
+         +'</div> '
 }
 
 addTuil(0);// ajoute la tuile cursor au html
