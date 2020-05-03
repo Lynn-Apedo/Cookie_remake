@@ -4,8 +4,6 @@ import { buildings } from "./data.mjs";
 console.log(buildings)
 import { Bakery } from "./class/bakery.mjs";
 
-import { addElementCookie } from "./class/aniCookie.mjs";
-console.log(addElementCookie)
 const myBakery = new Bakery(),
 get_bakery_h2 = document.querySelector('h2'),
 get_bakery_span1 = document.querySelector('span'),
