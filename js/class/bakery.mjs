@@ -7,13 +7,12 @@ export class Bakery {
         this._cookiesPerSecond = cookiesPerSecond || 0;
         
       }
-
+      get cookies() {
+        return this._cookies;
+      }
       bakeCookies(howMany) {
-       
-       
-
-
-        return this_cookies 
+        return this._cookies += this._cookiesPerClick;
+    
       }
 }
 

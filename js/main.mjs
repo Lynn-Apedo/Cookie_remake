@@ -60,13 +60,12 @@ addTuil(4);
 
 
 
+let click_bigCookie = document.getElementById('bigCookie');
+click_bigCookie.addEventListener('click', addClick)
 
-
-
-
-
-
-
+function addClick() {
+    get_bakery_span1.innerHTML = myBakery.bakeCookies()
+}
 
 
 
