@@ -7,6 +7,14 @@ export class Bakery {
         this._cookiesPerSecond = cookiesPerSecond || 0;
         
       }
+
+      bakeCookies(howMany) {
+       
+       
+
+
+        return this_cookies 
+      }
 }
 
 

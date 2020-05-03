@@ -12,7 +12,7 @@ get_bakery_span2 = document.querySelectorAll('span');
 
 
 get_bakery_h2.innerHTML = `${myBakery._name}'s Bakery`; 
-get_bakery_span1.innerHTML = `${myBakery._cookiesPerClick}` ;
+get_bakery_span1.innerHTML = `${myBakery._cookies}` ;
 get_bakery_span2[1].innerHTML = `${myBakery._cookiesPerSecond}`;
 
 
@@ -24,7 +24,7 @@ let buildings_container = document.getElementById('buildings');
 
 
 
-const iconPosition = ['-64px 0px',' -64px -64px','-64px -195px','-64px -258px','-64px -320px'] // position des icones 
+const iconPosition = ['-64px 0px',' -64px -64px','-64px -192px','-64px -256px','-64px -320px','-64px -384px','-64px -448px','-64px -512px','-64px -577px','-64px -642px','-64px -705px','-64px -768px','-64px -832px','-64px -896px','-64px -962px','-64px -1024px','-64px -1089px'] // position des icones 
 
 function addTuil(number) {
 
