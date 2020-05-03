@@ -78,7 +78,7 @@
   cursor: pointer;
 }
 #bigCookie{
-
+  position: relative;
    height: 225px;
    width: 225px;
 
@@ -99,6 +99,33 @@
    
    
 }
+
+.plus{
+  position: absolute;
+  animation-name: plus;
+  animation-duration: 3s;
+}
+
+@keyframes plus {
+  0% {
+      top: 110px;
+      
+      
+  }
+  20% {
+      opacity: 0.5; 
+       
+  }
+  50% {
+      opacity: 0.2;
+  }
+  100% {
+      opacity: 0;
+      top: -200px;
+      
+  }
+}
+
 
 
   /* KEYFRAMES COLORS BAKERY and NEON */

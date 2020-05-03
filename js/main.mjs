@@ -63,9 +63,31 @@ addTuil(4);
 let click_bigCookie = document.getElementById('bigCookie');
 click_bigCookie.addEventListener('click', addClick)
 
-function addClick() {
+function addClick(event) {
     get_bakery_span1.innerHTML = myBakery.bakeCookies()
+    console.log('positio' ,event)
+    //event = create_divPlus
+    console.log(event)
+    let create_divPlus = document.createElement('div');
+
+    create_divPlus.innerHTML = '+1'
+    create_divPlus.className = 'plus';
+    create_divPlus.style.left = event.offsetX+ 'px';
+    console.log('event offset',event.offsetX)
+    click_bigCookie.appendChild(create_divPlus);
+
+    
+    console.log(event.clientX)
+
+
+    create_divPlus.addEventListener('animationend', () => {
+    click_bigCookie.removeChild(create_divPlus)
+});
 }
+
+
+
+
 
 
 
