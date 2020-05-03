@@ -1,17 +1,28 @@
  /* Là aussi, pas question d’ajouter du HTML pour y parvenir. C’est le moment d’apprendre à utiliser des techniques CSS 
 un peu plus avancées, le pseudo-élément ::after est un ami.  */
 
+#buildings{
 
-#buildings > * {
-
-
-background-image: url(../../assets/images/store-tile.jpg) ;
-
-cursor: url(../../assets/images/cursor.png), auto;
+display: flex;
+flex-direction: column;
 
 }
 
+#buildings > * {
 
+    background-image: url(../../assets/images/store-tile.jpg);
+    cursor: url(../../assets/images/cursor.png), auto;
+    height: 10.5%;
+    display: flex;
+    transition: 0.3s;
+    opacity: 0.5;
+}
+
+#buildings > *:hover{
+
+   
+filter: drop-shadow(0 0 1rem #ffffff);
+}
 
 /* 
 .locked{
@@ -42,110 +53,70 @@ cursor: url(../../assets/images/cursor.png), auto;
 
 }  */
 
-/*
-.enabled{
-
-} */
-
-
 
 
 
 
 .icon{
-
-    position: absolute;
-    width: 4.5%;
-    height: 8%;
-    background-position-x: 34%;
-    background-position-y: -0.5%;
     background-image: url(../../assets/images/buildings.png);
-    background-repeat: no-repeat;
-    background-size: 205px;
-    margin-left: 1%;
-    margin-top: 2px;
-  
+    width: 24%;
+   
+    margin-left: 3%;
+    height: 84%;
+ 
   
 }
+.icon ~ div {
+    display: flex;
+    flex-direction: column;
+    
+    padding-left: 2%;
+}
+
 .name{
   font-size: 1.3rem;
-  position: relative;
-  left: -30px;
+  width: 100px;
+  display: flex;
+  
 } 
 
 .cost::before{
-    content: '1 ';
-    background-image: url(../../assets/images/money.png); 
-    }
+    content: '';
+    background-repeat: no-repeat;
+    background-image: url(../../assets/images/money.png);
+  
+    width: 1.3rem;
+    background-position-y: 63%;
+ }
                                        
 .cost{
     
-    
-    background-repeat: no-repeat;
-    background-position: 120px;
     position: relative;
-    left: -35px;
-    /* top: 20px; */
-    bottom: 6px;
+    bottom: 1vh;
+    display: flex;
 } 
 
-.display_icon_cost{
 
-    display: flex;
-    flex-direction: column;
-}
 
                                                 /* Fond : money.png
                                             La taille du texte est proportionnelle à 0.7 fois la taille de référence
                                             Le texte est vert (#66ff66) par défaut
                                             Lorsque la tuile est désactivée (classe .disabled) le texte est corail (#ff6666) */
-/* .disabled .cost{
+ .disabled .cost{
     color: #ff6666 ;
 }
  .name .cost{
     text-shadow: 0px 0px 6px #000, 0px 1px 1px #000;
-}  */
+}  
                                             /* Le texte est gras
                                         Deux ombres :
                                         une ombre de couleur noir (#000000) avec aucun offset et un blur-radius de 4px
                                         une ombre de couleur noir (#000000) avec aucun offset-x, un offset-y de 1px et un blur-radius de 4px */
-.number{
+/* .number{
 
-    width: 4%;
-    height: 12%;
-    border: 2px solid blue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5em;
-    height: 10%;
+   
 } 
-
-#building-cursor .number{
-    position: absolute;
-    right:0;
-    top:90px;
-}
-#building-grandma .number{
-    position: absolute;
-    right:0;
-    top:155px;
-}
-#building-farm .number{
-    position: absolute;
-    right:0;
-    top:220px;
-}
-#building-mine .number{
-    position: absolute;
-    right:0;
-    top:285px;
-}
-#building-factory .number{
-    position: absolute;
-    right:0;
-    top:350px;
-}
+ */
 
 
 
