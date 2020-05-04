@@ -15,7 +15,7 @@ flex-direction: column;
 
     display: flex;
     transition: 0.3s;
-    opacity: 0.5;
+    
 }
 
 #buildings > *:hover{
@@ -94,6 +94,8 @@ flex-direction: column;
     position: relative;
     bottom: 1vh;
     display: flex;
+    
+    
 
 } 
 
@@ -103,9 +105,7 @@ flex-direction: column;
                                             La taille du texte est proportionnelle à 0.7 fois la taille de référence
                                             Le texte est vert (#66ff66) par défaut
                                             Lorsque la tuile est désactivée (classe .disabled) le texte est corail (#ff6666) */
- .disabled .cost{
-    color: #ff6666 ;
-}
+ 
  .name, .cost{
     text-shadow: 0px 0px 6px #000, 0px 1px 1px #000;
     font-style: bold;
@@ -130,3 +130,15 @@ flex-direction: column;
 
                                         */
  
+
+
+
+.disabled {
+
+opacity: 0.5;
+
+}
+
+.disabled .cost {
+color: #ff6666;
+}

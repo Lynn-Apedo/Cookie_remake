@@ -1,0 +1,85 @@
+
+
+
+
+#bigCookie:hover {
+
+    border-width: 5px 5px; 
+
+    transform: scale(1.1,1.1);
+    transition: all 0.5s;   
+   
+   
+}
+
+.plus{
+  position: absolute;
+  animation-name: plus;
+  animation-duration: 3s;
+}
+
+@keyframes plus {
+  0% {
+      top: 110px;
+      
+      
+  }
+  20% {
+      opacity: 0.5; 
+       
+  }
+  50% {
+      opacity: 0.2;
+  }
+  100% {
+      opacity: 0;
+      top: -200px;
+      
+  }
+}
+
+
+
+  /* KEYFRAMES COLORS BAKERY and NEON */
+  
+ 
+  #bakery:nth-child(1) h2 {
+
+    color: white;
+    transition: 0.2s;
+    
+  }
+    
+  #bakery:nth-child(1) h2{
+    -webkit-animation: neon1 1.2s ease-in-out infinite alternate;
+    -moz-animation: neon1 1.2s ease-in-out infinite alternate;
+    animation: neon1 1.2s ease-in-out infinite alternate;
+  }
+    
+  @-webkit-keyframes neon1 {
+    from {
+      text-shadow: 0 0 1px rgba(255, 255, 255, 0.4), 0 0 2px rgba(255, 255, 255, 0.4), 0 0 3px rgba(255, 255, 255, 0.4), 0 0 4px #228DFF, 0 0 7px #228DFF, 0 0 8px #228DFF, 0 0 5px #228DFF, 0 0 15px #228DFF;
+      }
+      to {
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.4), 0 0 10px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 255, 255, 0.4), 0 0 20px #228DFF, 0 0 50px #228DFF, 0 0 4px #228DFF, 0 0 5px #228DFF, 0 0 7px #228DFF;
+    }
+  }    
+    
+  @-moz-keyframes neon1 {
+    from {
+      text-shadow: 0 0 1px rgba(255, 255, 255, 0.4), 0 0 2px rgba(255, 255, 255, 0.4), 0 0 3px rgba(255, 255, 255, 0.4), 0 0 4px #228DFF, 0 0 7px #228DFF, 0 0 8px #228DFF, 0 0 5px #228DFF, 0 0 15px #228DFF;
+      }
+      to {
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.4), 0 0 10px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 255, 255, 0.4), 0 0 20px #228DFF, 0 0 50px #228DFF, 0 0 4px #228DFF, 0 0 5px #228DFF, 0 0 7px #228DFF;
+    }
+      
+  }
+  @keyframes neon1 {
+    from {
+      text-shadow: 0 0 1px rgba(255, 255, 255, 0.4), 0 0 2px rgba(255, 255, 255, 0.4), 0 0 3px rgba(255, 255, 255, 0.4), 0 0 4px #228DFF, 0 0 7px #228DFF, 0 0 8px #228DFF, 0 0 5px #228DFF, 0 0 15px #228DFF;
+      }
+      to {
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.4), 0 0 10px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 255, 255, 0.4), 0 0 20px #228DFF, 0 0 50px #228DFF, 0 0 4px #228DFF, 0 0 5px #228DFF, 0 0 7px #228DFF;
+    }
+  }
+

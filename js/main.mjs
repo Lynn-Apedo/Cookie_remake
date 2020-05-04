@@ -22,7 +22,7 @@ get_bakery_span2[1].innerHTML = `${myBakery._cookiesPerSecond}`;
 let buildings_container = document.getElementById('buildings');
 
 
-
+console.log(myBakery.cookies,buildings[0].cost)
 
 const iconPosition = ['-64px 0px',' -64px -64px','-64px -192px','-64px -256px','-64px -320px','-64px -384px','-64px -448px','-64px -512px','-64px -577px','-64px -642px','-64px -705px','-64px -768px','-64px -832px','-64px -896px','-64px -962px','-64px -1024px','-64px -1089px'] // position des icones 
 
@@ -40,8 +40,15 @@ function addTuil(number) {
          
         document.getElementsByClassName('icon')[number].style.backgroundPosition=(iconPosition[number]); //(2)
 
+        
+            
+            
+             }
+            
 
-}
+
+
+
 
 //
 
@@ -56,42 +63,42 @@ addTuil(4);
 /*AJOUT DES CLASSES VOiR CAHIER DES CHARCHES B. Les règles de l’interface ++ document css = > css/state/_buildingState.css*/
 
 
-function mathIntervalle(){
-   1
-}
-console.log('min inter', mathIntervalle())
 
 
-let click_bigCookie = document.getElementById('bigCookie');
-click_bigCookie.addEventListener('click', addClick)
+let backery_bigCookie = document.getElementById('bigCookie');
+backery_bigCookie.addEventListener('click', addClick)
 
 function addClick(event) {
+
+ 
+
+    
+
+
     get_bakery_span1.innerHTML = myBakery.bakeCookies()
-    console.log('positio' ,event)
-    //event = create_divPlus
-    console.log(event)
+
+
     let create_divPlus = document.createElement('div');
 
     create_divPlus.innerHTML = '+1'
     create_divPlus.className = 'plus';
     create_divPlus.style.left = event.offsetX+ 'px';
-    console.log('event offset',event.offsetX)
-    click_bigCookie.appendChild(create_divPlus);
+   
+    backery_bigCookie.appendChild(create_divPlus);
     
-  
-    
+    let playSound = document.createElement('audio')
+    playSound.src = `./assets/sounds/click${(Math.floor(Math.random() * 7) + 1)}.mp3`
+    create_divPlus.appendChild(playSound)
+    playSound.play()    
 
     create_divPlus.addEventListener('animationend', () => {
-    click_bigCookie.removeChild(create_divPlus)
+    backery_bigCookie.removeChild(create_divPlus)
 });
 }
 
+const iconColorPosition = ['0px 0px',' -64px -64px','-64px -192px','-64px -256px','-64px -320px','-64px -384px','-64px -448px','-64px -512px','-64px -577px','-64px -642px','-64px -705px','-64px -768px','-64px -832px','-64px -896px','-64px -962px','-64px -1024px','-64px -1089px'];
 
-
-
-
-
-
+console.log(myBakery);
 
 
 

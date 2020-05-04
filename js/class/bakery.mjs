@@ -12,7 +12,7 @@ export class Bakery {
       }
       bakeCookies(howMany) {
         return this._cookies += this._cookiesPerClick;
-    
+      
       }
 }
 

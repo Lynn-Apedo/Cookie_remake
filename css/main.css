@@ -1,9 +1,27 @@
 @import "./base/_base.css";  /* body police de base , element de base,  sectionS*/
 
-@import "./section/_bakery.css";/* section bakery */
 
-@import "./section/_production.css";/* section production */
 
-@import "./section/_store.css";/* section store */
 
-@import "./state/_buildingState.css"; /* etat des tuiles 
+
+@import "./layout/_lbakery.css";
+
+@import "./layout/_lproduction.css";
+
+@import "./layout/_lstore.css";
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import "./state/_buildingState.css"; /* etat des tuiles*/ 
+
+@import "./state/_statebakery_cookie.css";
