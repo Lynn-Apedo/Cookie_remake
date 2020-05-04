@@ -3,7 +3,7 @@
 import { buildings } from "./data.mjs";
 console.log(buildings)
 import { Bakery } from "./class/bakery.mjs";
-
+let test = 0;
 const myBakery = new Bakery(),
 get_bakery_h2 = document.querySelector('h2'),
 get_bakery_span1 = document.querySelector('span'),
@@ -50,7 +50,7 @@ function addTuil(number) {
 
 
 
-//
+
 
 addTuil(0);// *******ajoute la tuile cursor au html (1) et ajoute la position de l'icone (2)******
 addTuil(1);//ajoute la tuile Grandmere au html
@@ -75,11 +75,20 @@ function addClick(event) {
     
 
 
-    get_bakery_span1.innerHTML = myBakery.bakeCookies()
+    get_bakery_span1.innerHTML = myBakery.bakeCookies();
+ 
+
+ for(let i = 0 ; i<buildings.length; i++)
+    if(myBakery.cookies>buildings[0].cost){
+    let casa=getElementById('building-cursor');
+    console.log(casa)
+
+    }
 
 
+   
     let create_divPlus = document.createElement('div');
-
+   
     create_divPlus.innerHTML = '+1'
     create_divPlus.className = 'plus';
     create_divPlus.style.left = event.offsetX+ 'px';
@@ -91,14 +100,21 @@ function addClick(event) {
     create_divPlus.appendChild(playSound)
     playSound.play()    
 
+
+       
+    
+
     create_divPlus.addEventListener('animationend', () => {
     backery_bigCookie.removeChild(create_divPlus)
+  
+    
 });
+
+
+
 }
 
 const iconColorPosition = ['0px 0px',' -64px -64px','-64px -192px','-64px -256px','-64px -320px','-64px -384px','-64px -448px','-64px -512px','-64px -577px','-64px -642px','-64px -705px','-64px -768px','-64px -832px','-64px -896px','-64px -962px','-64px -1024px','-64px -1089px'];
-
-console.log(myBakery);
 
 
 
