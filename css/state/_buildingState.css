@@ -23,6 +23,11 @@ flex-direction: column;
     box-shadow: inset 10px 10px 6px rgba(255,255,255,0.5), inset -10px -8px 8px rgba(255,255,255,0.5);
 }
 
+
+#buildings > *:active{
+    
+    box-shadow: inset 10px 10px 6px rgba(0,0,0,0.5), inset -10px -8px 8px rgba(0,0,0,0.5);
+}
 /* 
 .locked{
  
@@ -142,3 +147,9 @@ opacity: 0.5;
 .disabled .cost {
 color: #ff6666;
 }
+
+
+
+.enabled .cost {
+    color: #66ff66;
+    }

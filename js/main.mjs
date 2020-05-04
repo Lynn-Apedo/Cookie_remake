@@ -24,7 +24,10 @@ let buildings_container = document.getElementById('buildings');
 
 console.log(myBakery.cookies,buildings[0].cost)
 
-const iconPosition = ['-64px 0px',' -64px -64px','-64px -192px','-64px -256px','-64px -320px','-64px -384px','-64px -448px','-64px -512px','-64px -577px','-64px -642px','-64px -705px','-64px -768px','-64px -832px','-64px -896px','-64px -962px','-64px -1024px','-64px -1089px'] // position des icones 
+const iconPosition = ['-64px 0px',' -64px -64px','-64px -192px','-64px -256px','-64px -320px','-64px -384px','-64px -448px','-64px -512px','-64px -577px','-64px -642px','-64px -705px','-64px -768px','-64px -832px','-64px -896px','-64px -962px','-64px -1024px','-64px -1089px']; // position des icones 
+
+
+const iconColorPosition = ['6px 0px',' 6px -64px','6px -192px','6px -256px','6px -320px','6px -384px','6px -448px','6px -512px','6px -577px','6px -642px','6px -705px','6px -768px','6px -832px','6px -896px','6px -962px','6px -1024px','6px -1089px'];
 
 function addTuil(number) {
 
@@ -64,7 +67,7 @@ addTuil(4);
 
 
 
-console.log(document.getElementById('buldings'));
+console.log(buildings[0].name.toLowerCase());
 
 
 let backery_bigCookie = document.getElementById('bigCookie');
@@ -74,7 +77,14 @@ function addClick(event) {
 
  
 
-    
+    for(let i = 0 ; i<buildings.length; i++)
+    if(myBakery.cookies>buildings[i].cost){
+    let casa = document.getElementById("building-"+buildings[i].name.toLowerCase()+"");
+    casa.className = 'unlocked enabled'
+    console.log(casa)
+    let colorIcon=document.getElementsByClassName('icon');
+    colorIcon[i].style.backgroundPosition=(iconColorPosition[i]);
+    }
 
 
     get_bakery_span1.innerHTML = myBakery.bakeCookies();
@@ -115,7 +125,7 @@ function addClick(event) {
 
 }
 
-const iconColorPosition = ['0px 0px',' -64px -64px','-64px -192px','-64px -256px','-64px -320px','-64px -384px','-64px -448px','-64px -512px','-64px -577px','-64px -642px','-64px -705px','-64px -768px','-64px -832px','-64px -896px','-64px -962px','-64px -1024px','-64px -1089px'];
+
 
 
 
