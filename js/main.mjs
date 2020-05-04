@@ -56,8 +56,10 @@ addTuil(4);
 /*AJOUT DES CLASSES VOiR CAHIER DES CHARCHES B. Les règles de l’interface ++ document css = > css/state/_buildingState.css*/
 
 
-
-
+function mathIntervalle(){
+   1
+}
+console.log('min inter', mathIntervalle())
 
 
 let click_bigCookie = document.getElementById('bigCookie');
@@ -75,15 +77,18 @@ function addClick(event) {
     create_divPlus.style.left = event.offsetX+ 'px';
     console.log('event offset',event.offsetX)
     click_bigCookie.appendChild(create_divPlus);
-
     
-    console.log(event.clientX)
-
+  
+    
 
     create_divPlus.addEventListener('animationend', () => {
     click_bigCookie.removeChild(create_divPlus)
 });
 }
+
+
+
+
 
 
 
