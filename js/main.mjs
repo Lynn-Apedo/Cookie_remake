@@ -1,10 +1,12 @@
 
-
 import { buildings } from "./data.mjs";
-console.log(buildings)
+import { Building } from "./class/building.mjs";
 import { Bakery } from "./class/bakery.mjs";
-let test = 0;
+const myBuilding = new Building();
+console.log(myBuilding)
+
 const myBakery = new Bakery(),
+
 get_bakery_h2 = document.querySelector('h2'),
 get_bakery_span1 = document.querySelector('span'),
 get_bakery_span2 = document.querySelectorAll('span');
@@ -27,7 +29,7 @@ console.log(myBakery.cookies,buildings[0].cost)
 const iconPosition = ['-64px 0px',' -64px -64px','-64px -192px','-64px -256px','-64px -320px','-64px -384px','-64px -448px','-64px -512px','-64px -577px','-64px -642px','-64px -705px','-64px -768px','-64px -832px','-64px -896px','-64px -962px','-64px -1024px','-64px -1089px']; // position des icones 
 
 
-const iconColorPosition = ['6px 0px',' 6px -64px','6px -192px','6px -256px','6px -320px','6px -384px','6px -448px','6px -512px','6px -577px','6px -642px','6px -705px','6px -768px','6px -832px','6px -896px','6px -962px','6px -1024px','6px -1089px'];
+const iconColorPosition = ['6px 0px',' 6px -64px','6px -192px','6px -256px','6px -320px','6px -384px','6px -448px','6px -512px','6px -577px','6px -642px','6px -705px','6px -768px','6px -832px','6px -896px','6px -962px','6px -1024px','6px -1089px'];//a opti avec replace()
 
 function addTuil(number) {
 
@@ -43,7 +45,7 @@ function addTuil(number) {
          
         document.getElementsByClassName('icon')[number].style.backgroundPosition=(iconPosition[number]); //(2)
 
-        
+       console.log('number',document.getElementsByClassName('number'));
             
             
              }
@@ -79,22 +81,20 @@ function addClick(event) {
 
     for(let i = 0 ; i<buildings.length; i++)
     if(myBakery.cookies>buildings[i].cost){
-    let casa = document.getElementById("building-"+buildings[i].name.toLowerCase()+"");
-    casa.className = 'unlocked enabled'
-    console.log(casa)
+
+    let get_building_tuils = document.getElementById("building-"+buildings[i].name.toLowerCase()+"");
+    get_building_tuils.className = 'unlocked enabled'
+    
     let colorIcon=document.getElementsByClassName('icon');
     colorIcon[i].style.backgroundPosition=(iconColorPosition[i]);
+
     }
 
 
     get_bakery_span1.innerHTML = myBakery.bakeCookies();
  
 
-//  for(let i = 0 ; i< buildings.length; i++)
-//     if(myBakery.cookies>buildings[0].cost){
- 
 
-//     }
 
 
    
@@ -126,8 +126,22 @@ function addClick(event) {
 }
 
 
+myBuilding.buy();
+myBuilding.buy();
+myBuilding.buy();
+myBuilding.buy();
+
+console.log('number', myBuilding.number)
+console.log('cost', myBuilding.cost)
 
 
+get_building_tuils.addEventListener('click',()=>{
+
+let get_building_number = document.getElementsByClassName('number');
+
+console.log(get_building_tuils);
 
 
+})
 
+console.log(get_building_tuils)

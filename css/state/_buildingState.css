@@ -119,11 +119,18 @@ flex-direction: column;
                                         Deux ombres :
                                         une ombre de couleur noir (#000000) avec aucun offset et un blur-radius de 4px
                                         une ombre de couleur noir (#000000) avec aucun offset-x, un offset-y de 1px et un blur-radius de 4px */
-/* .number{
-
+.number{
+    color: white;
+    align-content: right;
+    align-self: center;
    
+    text-align: right;
+    width: 20%;
+
+    margin-left: 13%;
+    font-size: 31px;
 } 
- */
+ 
 
 
 
