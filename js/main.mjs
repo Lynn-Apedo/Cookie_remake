@@ -64,6 +64,8 @@ addTuil(4);
 
 
 
+console.log(document.getElementById('buldings'));
+
 
 let backery_bigCookie = document.getElementById('bigCookie');
 backery_bigCookie.addEventListener('click', addClick)
@@ -78,12 +80,11 @@ function addClick(event) {
     get_bakery_span1.innerHTML = myBakery.bakeCookies();
  
 
- for(let i = 0 ; i<buildings.length; i++)
-    if(myBakery.cookies>buildings[0].cost){
-    let casa=getElementById('building-cursor');
-    console.log(casa)
+//  for(let i = 0 ; i< buildings.length; i++)
+//     if(myBakery.cookies>buildings[0].cost){
+ 
 
-    }
+//     }
 
 
    
