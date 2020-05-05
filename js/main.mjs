@@ -2,7 +2,7 @@ import { buildings } from "./data.mjs"; //récupère le tableau contenant les do
 import { Building } from "./class/building.mjs";// récupère la class Building
 import { Bakery } from "./class/bakery.mjs";// récuèpere la class Bakery
 
-const myBuilding = new Building();// instancie la class Building
+// const myBuilding = new Building(buildings[1].name);// instancie la class Building
 const myBakery = new Bakery(), // instancie la class Bakery
 
 get_bakery_h2 = document.querySelector('h2'),// récupère le h2 de la section bakery
@@ -10,11 +10,9 @@ get_bakery_span1 = document.querySelector('span'),// récupère le span1 de la s
 get_bakery_span2 = document.querySelectorAll('span');// récupère le span2 de la section bakery
 
 
-
 get_bakery_h2.innerHTML = `${myBakery._name}'s Bakery`; //on modifie le h2 de la section Bakery avec la variable name de l'objet myBakery
 get_bakery_span1.innerHTML = `${myBakery._cookies}` ;//on modifie le span1 de la section Bakery avec la variable cookies de l'objet myBakery
 get_bakery_span2[1].innerHTML = `${myBakery._cookiesPerSecond}`;//on modifie le span2 de la section Bakery avec la variable cookiesPerSecond de l'objet myBakery
-
 
 
 
@@ -31,22 +29,35 @@ const iconColorPosition = ['6px 0px',' 6px -64px','6px -192px','6px -256px','6px
 //tableau des coordonnées des silhouettes en couleur
 
 function addTuil(number) {//fonction qui crée les tuiles du store
+    console.log('test1', myBakery._buildings[number])
 
     buildings_container.innerHTML += //ajoute les div ci-dessous en fonction du paramètre number
-    '<div id="building-'+buildings[number].name.toLowerCase()+'" class="locked disabled">' //crée un div ayant pour id "building-" + "une variable qui récupère les propriétés name du tableau buildings en fonction du paramètre number"
+    '<div id="building-'+myBakery._buildings[number]._name.toLowerCase()+'" class="locked disabled">' //crée un div ayant pour id "building-" + "une variable qui récupère les propriétés name du tableau buildings en fonction du paramètre number"
         +'<div class="icon"></div>'
             +'<div>'
                 +'<div class="name">'+ buildings[number].name +'</div>'//le nom du bâtiment de production est affiché dynamiquement grâce à variable 'buildings[number].name'
                 +'<div class="cost">'+ buildings[number].cost +'</div>'//le coût du bâtiment de production est affiché dynamiquemen grâce à variable 'buildings[number].cost'
             +'</div>'
-                +'<div class="number"></div>'
+                +'<div class="number">'+ myBakery._buildings[number]._number +'</div>'
          +'<div/>'                                         
          
+
+
         document.getElementsByClassName('icon')[number].style.backgroundPosition=(iconPosition[number]); //récupère la div.icon en fonction du paramètre number
         //on assigne les coordonnées du tableau iconPosition selon le paramètre number
 
-             }
-            
+        let get_building_number = document.getElementById("building-"+myBakery._buildings[number]._name.toLowerCase()+"");
+    
+        // get_building_number.addEventListener('click', ()=>{
+        
+        //     myBuilding.buy();
+        // });
+        
+
+    
+    
+    }
+               
 
 addTuil(0);//affiche la tuile Cursor
 addTuil(1);//affiche la tuile Grandmere
@@ -104,3 +115,102 @@ function addClick(event) {//A CHAQUE CLIQUE:
 
 
 }
+
+ 
+
+
+
+
+
+
+
+// const test = document.getElementById('buildings').childNodes;
+// console.log(test.childNodes)
+
+// test.forEach(tuils => tuils.addEventListener('click',click))
+
+// function click(){
+//     for(let i=0; i<buildings.length;i++){
+//     let count = 0;
+//     // if count = 0 => visibility hidden 
+
+//     console.log('count')
+//     if(myBakery.cookies >buildings[i].cost){
+//     count++
+//     document.getElementsByClassName('number')[i].innerHTML = count
+    
+//     }
+// }
+// }
+
+
+
+// console.log(document.getElementsByClassName('number')[0])
+
+// const test = document.getElementById('buildings').childNodes;
+// console.log(test.childNodes)
+
+// test.forEach(tuils => tuils.addEventListener('click',click))
+
+// function click(){
+//     for(let i=0; i<buildings.length;i++){
+//     let count = 0;
+//     // if count = 0 => visibility hidden 
+
+//     console.log('count')
+//     if(myBakery.cookies >buildings[i].cost){
+//     count++
+//     document.getElementsByClassName('number')[i].innerHTML = count
+    
+//     }
+// }
+// }
+
+
+
+// console.log(document.getElementsByClassName('number')[0])
+
+
+// let stock = 0;
+//         let stocktotal = 0;
+
+//         setInterval(function(){
+
+//             if (myBakery._cookies > buildings[number].cost){
+
+//                 stock = Math.floor(myBakery._cookies++ * 0.1);
+//                 stocktotal = stock+myBakery._cookies;
+
+//                 //stocktotal = myBakery._cookies++ - buildings[number].cost
+//                 get_bakery_span1.innerHTML = ${stock} ;
+//                 get_bakery_span2[1].innerHTML = ${stocktotal};
+//                 console.log(stock)
+//             }
+
+//         },1000);
+
+
+
+
+// function clickTuils() {
+ 
+//     for(let prop in buildings) {
+//         console.log('get number',prop)
+
+//         let get_building_tuils = document.getElementById("building-"+buildings[prop].name.toLowerCase()+"");
+//         get_building_tuils.addEventListener('click',()=>{
+
+//             // let get_building_number = document.getElementsByClassName('number');
+//             //alert('test click');
+//             console.log('smt',myBuilding.buy());
+
+
+//         });
+//     }
+
+
+// }
+// clickTuils();
+
+
+    

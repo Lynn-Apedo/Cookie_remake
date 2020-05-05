@@ -1,9 +1,15 @@
+import { buildings} from "../data.mjs";
+import { Building } from "./building.mjs";
+
+
 export class Bakery {
-      constructor(name, cookies, buildings, cookiesPerClick, cookiesPerSecond){
+      constructor(name, cookies, cookiesPerClick, cookiesPerSecond){
         this._name = name || 'devilCookie' ;
         this._cookies = cookies || 0;
-        this._building = buildings ;
-        this._cookiesPerClick = cookiesPerClick || 1;
+        this._buildings = buildings.map(building =>{
+          return new Building(building);
+        }) ;
+        this._cookiesPerClick = cookiesPerClick || 100;
         this._cookiesPerSecond = cookiesPerSecond || 0;
         
       }
@@ -16,7 +22,7 @@ export class Bakery {
       }
 }
 
-
+//maper sur les data et retourner des new building 
 
 
 
