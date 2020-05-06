@@ -1,60 +1,56 @@
-import { buildings } from "./data.mjs"; //récupère le tableau contenant les données des buildings
-import { Building } from "./class/building.mjs";// récupère la class Building
-import { Bakery } from "./class/bakery.mjs";// récuèpere la class Bakery
+//récupère les données d'un autre fichier
+import { buildings } from "./data.mjs";
+import { Building } from "./class/building.mjs";
+import { Bakery } from "./class/bakery.mjs";
 
 // const myBuilding = new Building(buildings[1].name);// instancie la class Building
+
 const myBakery = new Bakery(), // instancie la class Bakery
 
-get_bakery_h2 = document.querySelector('h2'),// récupère le h2 de la section bakery
-get_bakery_span1 = document.querySelector('span'),// récupère le span1 de la section bakery
-get_bakery_span2 = document.querySelectorAll('span');// récupère le span2 de la section bakery
+// instancie la class Bakery et récupération des éléments
+get_bakery_h2 = document.querySelector('h2'),
+get_bakery_span1 = document.querySelector('span'),
+get_bakery_span2 = document.querySelectorAll('span');
 
-
-get_bakery_h2.innerHTML = `${myBakery._name}'s Bakery`; //on modifie le h2 de la section Bakery avec la variable name de l'objet myBakery
-get_bakery_span1.innerHTML = `${myBakery._cookies}` ;//on modifie le span1 de la section Bakery avec la variable cookies de l'objet myBakery
-get_bakery_span2[1].innerHTML = `${myBakery._cookiesPerSecond}`;//on modifie le span2 de la section Bakery avec la variable cookiesPerSecond de l'objet myBakery
+//modification de ces éléments avec une variable des propriété de l'objet myBakery
+get_bakery_h2.innerHTML = `${myBakery._name}'s Bakery`;
+get_bakery_span1.innerHTML = `${myBakery._cookies}` ;
+get_bakery_span2[1].innerHTML = `${myBakery._cookiesPerSecond}`;
 
 
 
 
 let buildings_container = document.getElementById('buildings');// récupère la div#buildings de la section store
 
-
 console.log(myBakery.cookies,buildings[0].cost)
 
-const iconPosition = ['-64px 0px',' -64px -64px','-64px -192px','-64px -256px','-64px -320px','-64px -384px','-64px -448px','-64px -512px','-64px -577px','-64px -642px','-64px -705px','-64px -768px','-64px -832px','-64px -896px','-64px -962px','-64px -1024px','-64px -1089px'];
 //tableau des coordonnées des silhouettes noires
+const iconPosition = ['-64px 0px',' -64px -64px','-64px -192px','-64px -256px','-64px -320px','-64px -384px','-64px -448px','-64px -512px','-64px -577px','-64px -642px','-64px -705px','-64px -768px','-64px -832px','-64px -896px','-64px -962px','-64px -1024px','-64px -1089px'];
 
-const iconColorPosition = ['6px 0px',' 6px -64px','6px -192px','6px -256px','6px -320px','6px -384px','6px -448px','6px -512px','6px -577px','6px -642px','6px -705px','6px -768px','6px -832px','6px -896px','6px -962px','6px -1024px','6px -1089px'];
 //tableau des coordonnées des silhouettes en couleur
+const iconColorPosition = ['6px 0px',' 6px -64px','6px -192px','6px -256px','6px -320px','6px -384px','6px -448px','6px -512px','6px -577px','6px -642px','6px -705px','6px -768px','6px -832px','6px -896px','6px -962px','6px -1024px','6px -1089px'];
 
-function addTuil(number) {//fonction qui crée les tuiles du store
+
+//crée les tuiles du store
+function addTuil(number) {
     console.log('test1', myBakery._buildings[number])
 
-    buildings_container.innerHTML += //ajoute les div ci-dessous en fonction du paramètre number
-    '<div id="building-'+myBakery._buildings[number]._name.toLowerCase()+'" class="locked disabled">' //crée un div ayant pour id "building-" + "une variable qui récupère les propriétés name du tableau buildings en fonction du paramètre number"
+    //ajoute les div ci-dessous en fonction du paramètre number(=index d'un building)
+    buildings_container.innerHTML +=
+    '<div id="building-'+myBakery._buildings[number]._name.toLowerCase()+'" class="locked disabled">'
         +'<div class="icon"></div>'
             +'<div>'
-                +'<div class="name">'+ buildings[number].name +'</div>'//le nom du bâtiment de production est affiché dynamiquement grâce à variable 'buildings[number].name'
-                +'<div class="cost">'+ buildings[number].cost +'</div>'//le coût du bâtiment de production est affiché dynamiquemen grâce à variable 'buildings[number].cost'
+                +'<div class="name">'+ buildings[number].name +'</div>'
+                +'<div class="cost">'+ buildings[number].cost +'</div>'
             +'</div>'
                 +'<div class="number">'+ myBakery._buildings[number]._number +'</div>'
          +'<div/>'                                         
          
 
-
-        document.getElementsByClassName('icon')[number].style.backgroundPosition=(iconPosition[number]); //récupère la div.icon en fonction du paramètre number
         //on assigne les coordonnées du tableau iconPosition selon le paramètre number
+        document.getElementsByClassName('icon')[number].style.backgroundPosition=(iconPosition[number]);
 
         let get_building_number = document.getElementById("building-"+myBakery._buildings[number]._name.toLowerCase()+"");
-    
-        // get_building_number.addEventListener('click', ()=>{
-        
-        //     myBuilding.buy();
-        // });
-        
-
-    
     
     }
                
@@ -65,152 +61,117 @@ addTuil(2);
 addTuil(3);
 addTuil(4);
 
-let backery_bigCookie = document.getElementById('bigCookie');// récupère la div#bigCookie
-backery_bigCookie.addEventListener('click', addClick)//écoute la div#bigCookie et on lui donne un évènement click
+//écoute la div#bigCookie et on lui donne un évènement click
+let backery_bigCookie = document.getElementById('bigCookie');
+backery_bigCookie.addEventListener('click', addClick)
 
+//une boucle for itère chaque objet du tableau de données buildings
 function addClick(event) {//A CHAQUE CLIQUE:
+    for(let i = 0 ; i<buildings.length; i++){
+        if(myBakery.cookies>buildings[i].cost){
 
-    for(let i = 0 ; i<buildings.length; i++) //crée un boucle for qui itère chaque objet du tableau de données buildings
-    if(myBakery.cookies>buildings[i].cost){// si le stock de cookies est supérieur au cost d'une propriété d'un objet[i] se trouvant dans le tableau de données des buildings 
-
-    let get_building_tuils = document.getElementById("building-"+buildings[i].name.toLowerCase()+"");//récupère les div#"building-"+"buildings[i].name"
-    get_building_tuils.className = 'unlocked enabled'//ajoute une class 'unlocked enabled'aux div#"building-"+"buildings[i].name"
-    
-    let colorIcon=document.getElementsByClassName('icon');//récuère les div.icon
-    colorIcon[i].style.backgroundPosition=(iconColorPosition[i]);//on assigne les coordonnées du tableau inconColorPosition[i]
-
+            let get_building_tuils = document.getElementById("building-"+buildings[i].name.toLowerCase()+"");
+            get_building_tuils.className = 'unlocked enabled';
+            
+            let colorIcon=document.getElementsByClassName('icon');
+            colorIcon[i].style.backgroundPosition=(iconColorPosition[i]);
+            
+            }
     }
+        
 
+    //appelle la méthode myBakeryCookies() qui incrémente cookies par cookiesPerClick
+    get_bakery_span1.innerHTML = myBakery.bakeCookies();
 
-    get_bakery_span1.innerHTML = myBakery.bakeCookies();//à chaque clique, on appelle la méthode myBakeryCookies() qui incrémente cookies par cookiesPerClick
-
-
-
-
-
-    let create_divPlus = document.createElement('div');//crée une div
+    //crée une div et on lui assigne un contenu et une position
+    let create_divPlus = document.createElement('div');
+    create_divPlus.innerHTML = '+1';
+    create_divPlus.className = 'plus';
+    create_divPlus.style.left = event.offsetX+ 'px';
    
-    create_divPlus.innerHTML = '+1'//ajoute +1 dans la div
-    create_divPlus.className = 'plus';//assigne à la div une class 'plus'
-    create_divPlus.style.left = event.offsetX+ 'px';//assigne une position à la DIV.PLUS
+    //ajoute la DIV.PLUS comme élément enfant de la div.bigCookie
+    backery_bigCookie.appendChild(create_divPlus);
     
-   
-    backery_bigCookie.appendChild(create_divPlus);//ajoute la DIV.PLUS comme élément enfant de la div.bigCookie
-    
-    let playSound = document.createElement('audio')//crée un élément audio
-    playSound.src = `./assets/sounds/click${(Math.floor(Math.random() * 7) + 1)}.mp3`//assigne une piste audio à l'attribut src de l'élément audio
-    create_divPlus.appendChild(playSound)//ajoute l'élement audio comme enfant de la DIV.PLUS
-    playSound.play()//active le son de la variable playSound
+    //crée un élément audio | assignation de src | ajout à la div#bigCookie | activation du son
+    let playSound = document.createElement('audio')
+    playSound.src = `./assets/sounds/click${(Math.floor(Math.random() * 7) + 1)}.mp3`
+    create_divPlus.appendChild(playSound)
+    playSound.play()
 
 
-       
-    
-
-    create_divPlus.addEventListener('animationend', () => { //écoute la DIV.PLUS et on lui donne un évènement animationend (=qui exécute une fonction à la fin de l'animation sur l'élément DIV.PLUS)
-    backery_bigCookie.removeChild(create_divPlus)//SUPPRIME LA DIV.PLUS
-  
-    
-});
-
-
+    //animationend end s'exécute quand l'animation CSS +1 se termine
+    //quand l'animation dans create_divPlus se termine, la div est supprimé
+    create_divPlus.addEventListener('animationend', () => { 
+    backery_bigCookie.removeChild(create_divPlus)
+    });
 
 }
 
- 
+console.log('first',myBakery._buildings)
+console.log('second', myBakery._buildings[0].number)
+console.log('third', "building-"+buildings[0].name.toLowerCase())
 
 
+function clickTuils() {
+
+    for (let i = 0; i < myBakery._buildings.length; i++) {
+        let get_building_tuils = document.getElementById("building-"+buildings[i].name.toLowerCase());
+        console.log('fourth', get_building_tuils)
+        get_building_tuils.addEventListener('click',()=>{
+          
+
+            if(myBakery.cookies >= buildings[i].cost) {
+                console.log('true')
+                console.log('quel bâtiment',get_building_tuils)
+                console.log('nombre de bâtiment en stock', myBakery._buildings[i].number)
+
+                myBakery._buildings[i].buy();
+                
+                //incrémente le stock du bâtiment de la tuile sur laquelle on a cliqué
+                let get_building_number = get_building_tuils.querySelector('.number');
+                console.log('what is four', get_building_number)
+                get_building_number.innerHTML =  myBakery._buildings[i].number;
+                console.log('incrémentation du stock de bât', myBakery._buildings[i].number)
+                console.log('nombre à mettre ds la div.number' ,get_building_number.innerHTML)
+                console.log('get smth', get_building_number.innerHTML= myBakery._buildings[i].number)
+
+                //incrémente le cost du bâtiment de la tuile sur laquelle on a cliqué
+                let get_building_cost = get_building_tuils.querySelector('.cost');
+                console.log('price', get_building_cost)
+                get_building_cost.innerHTML = myBakery._buildings[i].cost;
+                console.log('get price' , get_building_cost.innerHTML)
+
+                //soustraire le stock de cookie par le cost de la tuile sur laquelle on a cliqué
+                
+
+                return get_building_number.innerHTML
+            
+            } else {
+                console.log('false')
+            } 
+        });
+            
+    }
+        
+}
 
 
+clickTuils();
 
+let incparsecond = 0;
+    let StockCookie = 0;
+    let inc = 0;
+    setInterval(function(){
+        if (myBakery.cookies >= 1){ // si le nombre de cookies est supérieur ou égal à buildings[number].cost
+            inc++;
+            incparsecond =(myBakery.cookies * 0.1)*inc;// cookies augmentés * 0.1
+            StockCookie = Math.floor((myBakery.cookies - buildings[0].cost)+incparsecond) 
+            get_bakery_span1.innerHTML = `${StockCookie}` ;
+            //get_bakery_span2[1].innerHTML =${variableaincrementarcursor} 
 
-
-// const test = document.getElementById('buildings').childNodes;
-// console.log(test.childNodes)
-
-// test.forEach(tuils => tuils.addEventListener('click',click))
-
-// function click(){
-//     for(let i=0; i<buildings.length;i++){
-//     let count = 0;
-//     // if count = 0 => visibility hidden 
-
-//     console.log('count')
-//     if(myBakery.cookies >buildings[i].cost){
-//     count++
-//     document.getElementsByClassName('number')[i].innerHTML = count
-    
-//     }
-// }
-// }
-
-
-
-// console.log(document.getElementsByClassName('number')[0])
-
-// const test = document.getElementById('buildings').childNodes;
-// console.log(test.childNodes)
-
-// test.forEach(tuils => tuils.addEventListener('click',click))
-
-// function click(){
-//     for(let i=0; i<buildings.length;i++){
-//     let count = 0;
-//     // if count = 0 => visibility hidden 
-
-//     console.log('count')
-//     if(myBakery.cookies >buildings[i].cost){
-//     count++
-//     document.getElementsByClassName('number')[i].innerHTML = count
-    
-//     }
-// }
-// }
-
-
-
-// console.log(document.getElementsByClassName('number')[0])
-
-
-// let stock = 0;
-//         let stocktotal = 0;
-
-//         setInterval(function(){
-
-//             if (myBakery._cookies > buildings[number].cost){
-
-//                 stock = Math.floor(myBakery._cookies++ * 0.1);
-//                 stocktotal = stock+myBakery._cookies;
-
-//                 //stocktotal = myBakery._cookies++ - buildings[number].cost
-//                 get_bakery_span1.innerHTML = ${stock} ;
-//                 get_bakery_span2[1].innerHTML = ${stocktotal};
-//                 console.log(stock)
-//             }
-
-//         },1000);
-
-
-
-
-// function clickTuils() {
- 
-//     for(let prop in buildings) {
-//         console.log('get number',prop)
-
-//         let get_building_tuils = document.getElementById("building-"+buildings[prop].name.toLowerCase()+"");
-//         get_building_tuils.addEventListener('click',()=>{
-
-//             // let get_building_number = document.getElementsByClassName('number');
-//             //alert('test click');
-//             console.log('smt',myBuilding.buy());
-
-
-//         });
-//     }
-
-
-// }
-// clickTuils();
-
-
-    
+            console.log(incparsecond)
+            let get_building_cookiesPerSecond = document.getElementById('cookiesPerSecond');
+            get_building_cookiesPerSecond
+            console.log('div.cookiesPerSec',get_building_cookiesPerSecond.innerHTML)
+        }
+    },1000);

@@ -4,7 +4,7 @@ export class Building {
             
             this._name = name;
             this._description = description;
-            this._number = number || 0;
+            this._number = number || 3;
             this._cookiesPerSecond = cookiesPerSecond;
             this._cost = cost ;
         }
@@ -21,7 +21,6 @@ export class Building {
 
         this._number++;
         this._cost= Math.floor(this._cost*1.15) //incremente le nouveau batiment de 15%
-        
     }    
 }
 
