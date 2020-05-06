@@ -5,11 +5,13 @@ export class Building {
             this._name = name;
             this._description = description;
             this._number = number || 3;
-            this._cookiesPerSecond = cookiesPerSecond;
+            this._cookiesPerSecond = cookiesPerSecond || 2;
             this._cost = cost ;
         }
 
-
+    get cookiesPerSecond() {
+        return this._cookiesPerSecond;
+    }
     get number(){
         return this._number
     }

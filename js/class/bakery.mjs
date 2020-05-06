@@ -9,7 +9,7 @@ export class Bakery {
         this._buildings = buildings.map(building =>{
           return new Building(building);
         }) ;
-        this._cookiesPerClick = cookiesPerClick || 100;
+        this._cookiesPerClick = cookiesPerClick || 1;
         this._cookiesPerSecond = cookiesPerSecond || 0;
         
       }
