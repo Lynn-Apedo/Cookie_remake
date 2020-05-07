@@ -1,6 +1,5 @@
 //récupère les données d'un autre fichier
 import { buildings } from "./data.mjs";
-import { Building } from "./class/building.mjs";
 import { Bakery } from "./class/bakery.mjs";
 
 // const myBuilding = new Building(buildings[1].name);// instancie la class Building
@@ -114,42 +113,42 @@ console.log('second', myBakery._buildings[0].number)
 console.log('third', "building-"+buildings[0].name.toLowerCase())
 
 
-function clickTuils() {
+// function clickTuils() {
 
-    for (let i = 0; i < myBakery._buildings.length; i++) {
-        let get_building_tuils = document.getElementById("building-"+buildings[i].name.toLowerCase());
-        console.log('fourth', get_building_tuils)
-        get_building_tuils.addEventListener('click',()=>{
+//     for (let i = 0; i < myBakery._buildings.length; i++) {
+//         let get_building_tuils = document.getElementById("building-"+buildings[i].name.toLowerCase());
+//         console.log('fourth', get_building_tuils)
+//         get_building_tuils.addEventListener('click',()=>{
           
 
-            if(myBakery.cookies >= buildings[i].cost) {
-                console.log('true')
-                console.log('quel bâtiment',get_building_tuils)
-                console.log('nombre de bâtiment en stock', myBakery._buildings[i].number)
+//             if(myBakery.cookies >= buildings[i].cost) {
+//                 console.log('true')
+//                 console.log('quel bâtiment',get_building_tuils)
+//                 console.log('nombre de bâtiment en stock', myBakery._buildings[i].number)
 
-                myBakery._buildings[i].buy();
+//                 myBakery._buildings[i].buy();
                 
-                //incrémente le stock du bâtiment de la tuile sur laquelle on a cliqué
-                let get_building_number = get_building_tuils.querySelector('.number');
-                console.log('what is four', get_building_number)
-                get_building_number.innerHTML =  myBakery._buildings[i].number;
-                console.log('incrémentation du stock de bât', myBakery._buildings[i].number)
-                console.log('nombre à mettre ds la div.number' ,get_building_number.innerHTML)
-                console.log('get smth', get_building_number.innerHTML= myBakery._buildings[i].number)
+//                 //incrémente le stock du bâtiment de la tuile sur laquelle on a cliqué
+//                 let get_building_number = get_building_tuils.querySelector('.number');
+//                 console.log('what is four', get_building_number)
+//                 get_building_number.innerHTML =  myBakery._buildings[i].number;
+//                 console.log('incrémentation du stock de bât', myBakery._buildings[i].number)
+//                 console.log('nombre à mettre ds la div.number' ,get_building_number.innerHTML)
+//                 console.log('get smth', get_building_number.innerHTML= myBakery._buildings[i].number)
 
-                //incrémente le cost du bâtiment de la tuile sur laquelle on a cliqué
-                let get_building_cost = get_building_tuils.querySelector('.cost');
-                console.log('price', get_building_cost)
-                get_building_cost.innerHTML = myBakery._buildings[i].cost;
-                console.log('get price' , get_building_cost.innerHTML)
+//                 //incrémente le cost du bâtiment de la tuile sur laquelle on a cliqué
+//                 let get_building_cost = get_building_tuils.querySelector('.cost');
+//                 console.log('price', get_building_cost)
+//                 get_building_cost.innerHTML = myBakery._buildings[i].cost;
+//                 console.log('get price' , get_building_cost.innerHTML)
 
-                //soustraire le stock de cookie par le cost de la tuile sur laquelle on a cliqué
-                let get_bakery_cookiesStockSpan = document.querySelector('span');
-                console.log('stock de cookies',myBakery._cookies)
-                console.log('cost du bêt cliqué',myBakery._buildings[i].cost)
+//                 //soustraire le stock de cookie par le cost de la tuile sur laquelle on a cliqué
+//                 let get_bakery_cookiesStockSpan = document.querySelector('span');
+//                 console.log('stock de cookies',myBakery._cookies)
+//                 console.log('cost du bêt cliqué',myBakery._buildings[i].cost)
 
-                get_bakery_cookiesStockSpan.innerHTML = myBakery._cookies - myBakery._buildings[i].cost
-                console.log('span de cookiesStock',get_bakery_cookiesStockSpan.innerHTML)
+//                 get_bakery_cookiesStockSpan.innerHTML = myBakery._cookies - myBakery._buildings[i].cost
+//                 console.log('span de cookiesStock',get_bakery_cookiesStockSpan.innerHTML)
 
 
 
@@ -157,58 +156,242 @@ function clickTuils() {
 
 
                 
-                return get_building_number.innerHTML
+//                 return get_building_number.innerHTML
             
-            } else {
-                console.log('false')
-            } 
-        });
+//             } else {
+//                 console.log('false')
+//             } 
+//         });
             
-    }
+//     }
         
+// }
+
+
+// clickTuils();
+
+// let incparsecond = 0;
+//     let StockCookie = 0;
+//     let inc = 0;
+//     let totalCookie =0;
+//     setInterval(function(){
+
+//           if(cookies acheter)(
+
+
+//           on augmente de le cookie /s de buildings[i]
+
+
+//           )
+
+    
+//     },1000);
+
+
+
+
+
+
+
+
+
+        // for (let i = 0; i < myBakery._buildings.length; i++) {
+        // if (myBakery.cookies >= myBakery._buildings[i].cost){ // si le nombre de cookies est supérieur ou égal à buildings[number].cost
+        //     inc++;
+        //     incparsecond =(myBakery.cookies * 0.01)*inc;// cookies augmentés * 0.1
+        //     StockCookie = Math.floor((myBakery.cookies)+incparsecond) 
+        //     totalCookie = StockCookie - get_building_cost
+        //     get_bakery_span1.innerHTML = totalCookie;
+
+        //     console.log(incparsecond)
+
+        //     let get_building_tuils = document.getElementById("building-"+buildings[i].name.toLowerCase());
+
+        //     let get_building_number = get_building_tuils.querySelector('.number');
+        //         console.log('what is four', get_building_number)
+        //         get_building_number.innerHTML =  myBakery._buildings[0].number;
+
+
+        //     let a = myBakery._buildings[i].cookiesPerSecond
+        //     let b = get_building_number.innerHTML
+        //     let multiplication = Math.floor(a * b)
+        //     console.log('a', a)
+        //     console.log('b', b)
+        //     console.log('c', multiplication)
+        //     console.log('*multiplication',multiplication)
+
+        //     let get_building_cookiesPerSecondSpan = document.querySelectorAll('span')
+        //     //get_building_cookiesPerSecondSpan[1].innerHTML = ${multiplication}
+        //     get_bakery_span2[1].innerHTML = multiplication
+        //     console.log('span cookiesPerSec',get_building_cookiesPerSecondSpan[1].innerHTML )
+
+
+let test= false;
+
+        function clickTuils() {
+
+            for (let i = 0; i < myBakery._buildings.length; i++) {
+                let get_building_tuils = document.getElementById("building-"+buildings[i].name.toLowerCase());
+                //console.log('fourth', get_building_tuils)
+                get_building_tuils.addEventListener('click',()=>{
+                  
+        
+                    if(myBakery.cookies >= buildings[i].cost) {
+                        //console.log('true')
+                        //console.log('quel bâtiment',get_building_tuils)
+                        //c 
+                        test = true;
+                        myBakery._buildings[i].buy();
+                        
+                        //incrémente le stock du bâtiment de la tuile sur laquelle on a cliqué
+                        let get_building_number = get_building_tuils.querySelector('.number');
+                        //console.log('what is four', get_building_number)
+                        get_building_number.innerHTML =  myBakery._buildings[i].number;
+                        //console.log('incrémentation du stock de bât', myBakery._buildings[i].number)
+                        //console.log('nombre à mettre ds la div.number' ,get_building_number.innerHTML)
+                        //console.log('get smth', get_building_number.innerHTML= myBakery._buildings[i].number)
+        
+                        //incrémente le cost du bâtiment de la tuile sur laquelle on a cliqué
+                        let get_building_cost = get_building_tuils.querySelector('.cost');
+                        //console.log('price', get_building_cost)
+                        get_building_cost.innerHTML = myBakery._buildings[i].cost;
+                        //console.log('get price' , get_building_cost.innerHTML)
+        
+                        //soustraire le stock de cookie par le cost de la tuile sur laquelle on a cliqué
+                        let get_bakery_cookiesStockSpan = document.querySelector('span');
+                        //console.log('stock de cookies',myBakery._cookies)
+                        //console.log('cost du bêt cliqué',myBakery._buildings[i].cost)
+        
+                        get_bakery_cookiesStockSpan.innerHTML = myBakery._cookies;
+                        //console.log('span de cookiesStock',get_bakery_cookiesStockSpan.innerHTML)
+        
+                        
+                        
+                    
+                    } else {
+                        //console.log(get_building_number.innerHTML)
+                    } 
+
+                    console.log(myBakery.cookies)
+                    let count = false
+                    console.log(count)
+             
+      
+          
+            if (myBakery.cookies >= myBakery._buildings[i].cost && test){
+                count=true; 
+              
+
+                // setInterval(()=>{
+
+                
+
+                // alert('1')
+
+
+
+
+
+
+
+
+                // },1000)
+
+
+
+
+            }
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                });
+                    
+            }
+        
+            let incparsecond = 0;
+            let inc = 0;
+            
+            get_bakery_span2[1].innerHTML=0;
+            // setInterval(function(){
+            //     for (let i = 0; i < myBakery._buildings.length; i++) {
+            //         if (myBakery.cookies >= myBakery._buildings[i].cost && test){ // si le nombre de cookies est supérieur ou égal à buildings[number].cost
+            //             incparsecond =myBakery.cookies * myBakery._buildings[i].cookiesPerSecond// cookies augmentés * 0.1
+            //             console.log(incparsecond)
+            //             let StockCookie = Math.floor((myBakery.cookies)+incparsecond)-myBakery._buildings[i].cost;
+            //             get_bakery_span1.innerHTML = `${StockCookie}` ;
+        
+            //             //console.log(myBakery._buildings[i].cost)
+            //             //console.log(StockCookie)
+        
+            //             let totalcookieparsecunde = (myBakery._buildings[i].cookiesPerSecond * myBakery._buildings[i].cost).toFixed(2); //* myBakery._buildings[i]._cost
+            //             get_bakery_span2[1].innerHTML = `${totalcookieparsecunde}`
+        
+            //             let aument = incparsecond*totalcookieparsecunde
+            //             //console.log(myBakery._buildings[i]._cost )
+            //             // myBakery._buildings[0].cookiesPerSecond
+            //         }
+            //     }
+            // },1000)
+        
+          console.log(myBakery.cookies)
+   let count = false
+  console.log(count)
+             
+      
+          
+            if (myBakery.cookies >= myBakery._buildings[j].cost && test){
+                count=true; 
+              
+
+                // setInterval(()=>{
+
+                
+
+                // alert('1')
+
+
+
+
+
+
+
+
+                // },1000)
+
+
+
+
+            }
+        
+
 }
 
 
-clickTuils();
-
-let incparsecond = 0;
-    let StockCookie = 0;
-    let inc = 0;
-    let totalCookie =0;
-    setInterval(function(){
-        for (let i = 0; i < myBakery._buildings.length; i++) {
-        if (myBakery.cookies >= myBakery._buildings[i].cost){ // si le nombre de cookies est supérieur ou égal à buildings[number].cost
-            inc++;
-            incparsecond =(myBakery.cookies * 0.01)*inc;// cookies augmentés * 0.1
-            StockCookie = Math.floor((myBakery.cookies)+incparsecond) 
-            totalCookie = StockCookie - get_building_cost
-            get_bakery_span1.innerHTML = ${totalCookie} ;
-
-            console.log(incparsecond)
-
-            let get_building_tuils = document.getElementById("building-"+buildings[i].name.toLowerCase());
-
-            let get_building_number = get_building_tuils.querySelector('.number');
-                console.log('what is four', get_building_number)
-                get_building_number.innerHTML =  myBakery._buildings[0].number;
 
 
-            let a = myBakery._buildings[i].cookiesPerSecond
-            let b = get_building_number.innerHTML
-            let multiplication = Math.floor(a * b)
-            console.log('a', a)
-            console.log('b', b)
-            console.log('c', multiplication)
-            console.log('*multiplication',multiplication)
 
-            let get_building_cookiesPerSecondSpan = document.querySelectorAll('span')
-            //get_building_cookiesPerSecondSpan[1].innerHTML = ${multiplication}
-            get_bakery_span2[1].innerHTML = ${multiplication}
-            console.log('span cookiesPerSec',get_building_cookiesPerSecondSpan[1].innerHTML )
+        
+        clickTuils();
+
+        // myBakery.cookies >= myBakery._buildings[i].cost
 
 
-            // myBakery._buildings[0].cookiesPerSecond
-        }
 
-    }
-    },1000);
+
+    
+    

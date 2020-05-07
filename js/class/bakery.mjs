@@ -20,6 +20,12 @@ export class Bakery {
         return this._cookies += this._cookiesPerClick;
       
       }
+      buyBuilding(which){
+        this._cookies = this._cookies - which.cost
+        which.buy()
+        this._cookiesPerSecond = which.cookiesPerSecond
+        console.log(this._cookiesPerSecond)
+    }
 }
 
 //maper sur les data et retourner des new building 
