@@ -4,8 +4,8 @@ export class Building {
             
             this._name = name;
             this._description = description;
-            this._number = number || 3;
-            this._cookiesPerSecond = cookiesPerSecond || 2;
+            this._number = number || 0;
+            this._cookiesPerSecond = cookiesPerSecond || 1;
             this._cost = cost ;
         }
 
