@@ -174,18 +174,18 @@ clickTuils();
 let incparsecond = 0;
     let StockCookie = 0;
     let inc = 0;
+    let totalCookie =0;
     setInterval(function(){
         for (let i = 0; i < myBakery._buildings.length; i++) {
         if (myBakery.cookies >= myBakery._buildings[i].cost){ // si le nombre de cookies est supérieur ou égal à buildings[number].cost
             inc++;
-            incparsecond =(myBakery.cookies * 0.1)*inc;// cookies augmentés * 0.1
-            StockCookie = Math.floor((myBakery.cookies - buildings[i].cost)+incparsecond) 
-            get_bakery_span1.innerHTML = `${StockCookie}` ;
-            //get_bakery_span2[1].innerHTML =${variableaincrementarcursor} 
+            incparsecond =(myBakery.cookies * 0.01)*inc;// cookies augmentés * 0.1
+            StockCookie = Math.floor((myBakery.cookies)+incparsecond) 
+            totalCookie = StockCookie - get_building_cost
+            get_bakery_span1.innerHTML = ${totalCookie} ;
+
             console.log(incparsecond)
 
-
-            
             let get_building_tuils = document.getElementById("building-"+buildings[i].name.toLowerCase());
 
             let get_building_number = get_building_tuils.querySelector('.number');
@@ -200,13 +200,13 @@ let incparsecond = 0;
             console.log('b', b)
             console.log('c', multiplication)
             console.log('*multiplication',multiplication)
-           
-            let get_building_cookiesPerSecondSpan = document.querySelectorAll('span')
-            get_building_cookiesPerSecondSpan[1].innerHTML = `${multiplication}`
 
+            let get_building_cookiesPerSecondSpan = document.querySelectorAll('span')
+            //get_building_cookiesPerSecondSpan[1].innerHTML = ${multiplication}
+            get_bakery_span2[1].innerHTML = ${multiplication}
             console.log('span cookiesPerSec',get_building_cookiesPerSecondSpan[1].innerHTML )
-        
-            
+
+
             // myBakery._buildings[0].cookiesPerSecond
         }
 
