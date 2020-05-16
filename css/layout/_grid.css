@@ -1,0 +1,76 @@
+#game {
+    display:flex; 
+    justify-content: space-between;
+    
+    padding-top: 15px; 
+
+    background-image: radial-gradient(circle, transparent 0%, rgba(0,0,0,0.5) 100%)
+    
+    }
+
+    #bakery{
+      flex:1;
+      height: 100vh;
+      min-width: 250px;
+      max-width: 400px;
+      
+
+      
+      background-image: radial-gradient(circle, transparent 0%, rgba(0,0,0,0.5) 100%);
+    }
+    
+    #production{
+        flex:2;
+        overflow-y: scroll;
+        height: 100vh;
+        min-width: 500px;   
+        background: linear-gradient( rgba(0,0,0,0.4), transparent 100%);
+    
+    }  
+    
+    
+    #store{
+        min-width: 150px;
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        background-image: radial-gradient(circle, transparent 0%, rgba(0,0,0,0.5) 100%);
+    }
+
+     
+     #buildings{
+        flex:1;
+        margin-top: 15px;
+        background:url(../../assets/images/panel-horizontal.png) no-repeat 0 1px;
+      
+    }
+
+     #buildings::before {
+        content: 'buildings';
+        font-family: 'Merriweather', serif ;
+        color: #f4d8b6;
+        text-transform: uppercase;
+        text-align: left;
+        padding-left: 2%;
+        display: block;
+        font-size: 11px;
+        text-shadow: 0 1px 4px #000;
+    }
+
+
+
+
+
+
+     .separator{
+     width: 1rem;
+     background: url(../../assets/images/panel-vertical.png);    
+     }
+
+     hr{
+        margin-top: 15px;
+         height: 1rem;
+         background: url(../../assets/images/panel-horizontal.png); 
+        
+        }
+    

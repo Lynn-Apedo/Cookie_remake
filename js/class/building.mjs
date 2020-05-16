@@ -23,7 +23,13 @@ export class Building {
 
         this._number++;
         this._cost= Math.floor(this._cost*1.15) //incremente le nouveau batiment de 15%
-    }    
+    } 
+    buyBuilding(which){
+        this._cookies = this._cookies - which.cost
+        which.buy()
+        this._cookiesPerSecond = which.cookiesPerSecond
+        console.log(this._cookiesPerSecond)
+    }   
 }
 
 

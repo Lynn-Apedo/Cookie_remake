@@ -1,5 +1,7 @@
 //récupère les données d'un autre fichier
 import { buildings } from "./data.mjs";
+import { plage } from "./cookiePlage.mjs";
+console.log(plage)
 import { Building } from "./class/building.mjs";
 import { Bakery } from "./class/bakery.mjs";
 //import { AddElement } from "./dom/addOmbre.mjs";
@@ -15,7 +17,7 @@ get_bakery_span1 = document.querySelector('span'),
 get_bakery_span2 = document.querySelectorAll('span');
 
 //modification de ces éléments avec une variable des propriété de l'objet myBakery
-get_bakery_h2.innerHTML = `${myBakery._name}'s Bakery`;
+get_bakery_h2.innerHTML = `${myBakery._name} SAS Bakery`;
 get_bakery_span1.innerHTML = `${myBakery._cookies}` ;
 get_bakery_span2[1].innerHTML = `${myBakery._buildings.cookiesPerSecond}`;
 //console.log('why',get_bakery_span2[1].innerHTML)
@@ -169,7 +171,7 @@ let test= false;
             setInterval(function(){
                 for (let i = 0; i < myBakery._buildings.length; i++) {
                     if (myBakery.cookies >= myBakery._buildings[i].cost && test){ // si le nombre de cookies est supérieur ou égal à buildings[number].cost
-                        incparsecond =(myBakery.cookies * myBakery._buildings[i].cookiesPerSecond * 0.1)*inc++;// cookies augmentés * 0.1
+                        incparsecond =(myBakery.cookies * myBakery._buildings[i].cookiesPerSecond)*inc++;// cookies augmentés * 0.1
                         //console.log(incparsecond)
                         let StockCookie = Math.floor((myBakery.cookies)+incparsecond)-myBakery._buildings[i].cost;
                         get_bakery_span1.innerHTML = `${StockCookie}` ;
@@ -177,7 +179,7 @@ let test= false;
                         //console.log(myBakery._buildings[i].cost) //incremento de costo en el batiment
                         //console.log(StockCookie)
         
-                        let totalcookieparsecunde = myBakery._buildings[i].number *(myBakery._buildings[i].cookiesPerSecond * buildings[i].cost).toFixed(2); //* myBakery._buildings[i]._cost
+                        let totalcookieparsecunde = (myBakery._buildings[i].cookiesPerSecond * myBakery._buildings[i].number ).toFixed(2); //* myBakery._buildings[i]._cost
                         get_bakery_span2[1].innerHTML = `${totalcookieparsecunde}`
                         //console.log(totalcookieparsecunde)
                         let aument = incparsecond*totalcookieparsecunde
@@ -188,5 +190,45 @@ let test= false;
             },1000)
         }
         
-        
-        clickTuils();
+clickTuils();
+
+function addElementDiv() {
+    const addDiv = document.getElementById('bakery');
+    const elementDiv = document.createElement('div');
+        elementDiv.id="large" 
+        elementDiv.innerHTML = `
+        <div id="ombre1"></div>
+        <div id="ombre2"></div>
+        <div class="cookiepetite" id="cookie1"></div> 
+        <div class="cookiepetite" id="cookie2"></div> 
+        <div class="cookiepetite" id="cookie3"></div> 
+        <div class="cookiepetite" id="cookie4"></div> 
+        <div class="cookiepetite" id="cookie5"></div> 
+        <div id="plage"></div>     
+        `;
+    let BigCookie = document.getElementById('bigCookie');
+    const P2 = BigCookie.parentNode
+    P2.insertBefore(elementDiv, BigCookie)    
+    console.log(addDiv);  
+/* 
+  const addD = document.getElementById('bakery');
+    const element = document.createElement('div');
+        element.className="container" 
+        element.innerHTML = `
+          <canvas></canvas>
+          <img id="ship" src="./assets/images/gold-cookie.png" alt="">    
+        `;
+    addD.appendChild(element);
+ 
+    const addMain = document.getElementById('bakery');
+    const elementMain = document.createElement('div');
+        elementMain.className="main" 
+        addMain .appendChild(elementMain);
+
+    let main = document.getElementById('bigCookie');
+    const PMain = main.parentNode
+    PMain.insertBefore(elementMain, main)    
+    console.log(addMain); */
+}
+  document.body.onload = addElementDiv;    
+  console.log(addElementDiv);

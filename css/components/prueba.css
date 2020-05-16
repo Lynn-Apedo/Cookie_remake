@@ -1,0 +1,61 @@
+#bigCookie{
+  position: relative;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: linear-gradient(#f8fafa, #3f3f3d, #faf9fa);
+  transform: scale(1.2);
+  animation: animate 0.7s linear infinite;           
+}
+
+@keyframes animate 
+{
+  0%
+  {
+      transform: rotate(0deg);
+  }
+  100%
+  {
+      transform: rotate(360deg);
+  }
+}
+#bigCookie span{ 
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(#f8fafa, #3f3f3d, #faf9fa);
+}
+#bigCookie span:nth-child(1)
+{
+  filter: blur(10px);
+} #bigCookie span:nth-child(2)
+{
+  filter: blur(50px);
+} #bigCookie span:nth-child(3)
+{
+  filter: blur(70px);
+} #bigCookie span:nth-child(4)
+{
+  filter: blur(100px);
+}
+
+#Cookie:after
+{
+content: '';
+position: absolute;
+width: 200px;
+height: 200px;
+background-image: url("../../assets/images/perfect-cookie.png");
+background-size: 200px;
+left: 700px;
+top: 260px;
+
+}
+#Cookie:hover {
+cursor: pointer;
+
+}
+#Cookie:active {
+transform: scale(1.2);
+}

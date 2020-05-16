@@ -4,7 +4,7 @@ import { Building } from "./building.mjs";
 
 export class Bakery {
       constructor(name, cookies, cookiesPerClick, cookiesPerSecond){
-        this._name = name || 'devilCookie' ;
+        this._name = name || 'MgM' ;
         this._cookies = cookies || 0;
         this._buildings = buildings.map(building =>{
           return new Building(building);
@@ -20,12 +20,6 @@ export class Bakery {
         return this._cookies += this._cookiesPerClick;
       
       }
-      buyBuilding(which){
-        this._cookies = this._cookies - which.cost
-        which.buy()
-        this._cookiesPerSecond = which.cookiesPerSecond
-        console.log(this._cookiesPerSecond)
-    }
 }
 
 //maper sur les data et retourner des new building 

@@ -2,10 +2,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-   
     list-style: none;
     line-height: 1.8;
-
     user-select: none;
 }
 
@@ -13,9 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-
     background-image: url("../../assets/images/bg-blue.jpg");
-    
     font-family: "Merriweather", serif;
     text-align: center;
     color: #ffffff;
@@ -23,30 +19,20 @@ body {
 }
 
 h2{
-     font-size: 1.5rem;
-
+    font-size: 1.5rem;
     text-shadow: 0px 1px 4px #000000; /* offset-x | offset-y | blur-radius | color */
-    text-shadow: 0px 0px 4px #000000; /*2 ombres*/
-   
-
+    text-shadow: 0px 0px 4px #000000; /*2 ombres*/ 
 }
 
 .separator{
-    width: 1rem;
-    
+    width: 1rem; 
     background: url(../../assets/images/panel-vertical.png);    
-    }
+}
 
 
 #game {
-    
     display:flex; 
-    
-        
     padding-top: 15px; 
-    
     background-image: radial-gradient(circle, transparent 0%, rgba(0,0,0,0.5) 100%)
-        
-        }
-
+}
 

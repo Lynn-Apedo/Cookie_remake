@@ -1,0 +1,34 @@
+class Bakery {
+    bakery(){
+        const Cookie = document.getElementById('bakery');
+        const element = document.createElement('div');
+        element.innerHTML = `
+        <div id ="Cookie"></div>
+        `;
+        Cookie.appendChild(element);
+    }
+}
+
+class Cookie {
+    BibCookie(){
+        const Cookie = document.getElementById('bigCookie');
+        const element = document.createElement('span');
+        element.innerHTML = `
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        `;
+        Cookie.appendChild(element);
+        console.log(element);
+    }
+}
+
+document.getElementById('bigCookie').addEventListener('click', function (e) {
+        const Datos = new Cookie();
+        Datos.BibCookie(e.target);
+    });
+document.getElementById('bakery').addEventListener('click', function (e) {
+        const Datos = new Bakery();
+        Datos.bakery(e.target);
+    });

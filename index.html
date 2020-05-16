@@ -12,15 +12,17 @@
   <body>
    
     <main id="game">
-
-      <section id="bakery">
-          
+      <section id="bakery" > 
         <h2>Bakery</h2>
-        <div id="cookies">
+        <div id="cookies" >
           <div id="cookiesStock"><span>?</span> cookies</div>
           <div id="cookiesPerSecond">cookies per second: <span>?</span></div>
         </div>
-        <div id="bigCookie"></div>
+        <div class="container">
+          <canvas></canvas>
+          <img id="ship" src="./assets/images/gold-cookie.png" alt="">
+        </div>
+        <div id="bigCookie"></div> 
       </section>
 
       <div class="separator"></div>
@@ -29,7 +31,6 @@
         <h2>Production lines</h2>
         <hr/>
       </section>
-
       <div class="separator"></div>
 
       <section id="store">

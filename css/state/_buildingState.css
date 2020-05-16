@@ -2,79 +2,36 @@
 un peu plus avancées, le pseudo-élément ::after est un ami.  */
 
 #buildings{
-
-display: flex;
-flex-direction: column;
-
+    display: flex;
+    flex-direction: column;
 }
 
 #buildings > * {
-
     background-image: url(../../assets/images/store-tile.jpg);
     cursor: url(../../assets/images/cursor.png), auto;
-
     display: flex;
     transition: 0.3s;
-    
 }
 
 #buildings > *:hover{
-    
     box-shadow: inset 10px 10px 6px rgba(255,255,255,0.5), inset -10px -8px 8px rgba(255,255,255,0.5);
 }
 
-
 #buildings > *:active{
-    
     box-shadow: inset 10px 10px 6px rgba(0,0,0,0.5), inset -10px -8px 8px rgba(0,0,0,0.5);
 }
-/* 
-.locked{
- 
-} 
-                                        /* 
-                                        Lorsqu’une tuile est bloquée (classe .locked) la silhouette de l’icône est affichée
-
-                                        */
-/* 
-
-.disabled{
-
-} */
-                                        /* Lorsqu’une tuile est désactivée (classe .disabled) :
-                                        Le texte du coût du bâtiment est de couleur corail (#ff6666)
-                                        L’image de fond de la tuile est assombri
-                                        */
-
-/* .locked .disabled { 
-
-
-}
-
-
-.unlocked{
-    
-
-}  */
-
-
-
-
 
 .icon{
     background-image: url(../../assets/images/buildings.png);
     width: 21%;
-   
     margin-left: 3%;
     height: 97%;
     background-position: -62px -64px;
- 
-  
 }
+
 .icon ~ div {
     display: flex;
     flex-direction: column;
-    
     padding-left: 2%;
 }
 
@@ -82,81 +39,57 @@ flex-direction: column;
   font-size: 1.3rem;
   width: 100px;
   display: flex;
-  
 } 
 
 .cost::before{
     content: '';
     background-repeat: no-repeat;
     background-image: url(../../assets/images/money.png);
-  
     width: 1.3rem;
     background-position-y: 63%;
  }
                                        
 .cost{
-    
     position: relative;
     bottom: 1vh;
     display: flex;
-    
-    
-
 } 
 
-
-
-                                                /* Fond : money.png
-                                            La taille du texte est proportionnelle à 0.7 fois la taille de référence
-                                            Le texte est vert (#66ff66) par défaut
-                                            Lorsque la tuile est désactivée (classe .disabled) le texte est corail (#ff6666) */
+    /* Fond : money.png
+La taille du texte est proportionnelle à 0.7 fois la taille de référence
+Le texte est vert (#66ff66) par défaut
+Lorsque la tuile est désactivée (classe .disabled) le texte est corail (#ff6666) */
  
  .name, .cost{
     text-shadow: 0px 0px 6px #000, 0px 1px 1px #000;
     font-style: bold;
 }  
-                                            /* Le texte est gras
-                                        Deux ombres :
-                                        une ombre de couleur noir (#000000) avec aucun offset et un blur-radius de 4px
-                                        une ombre de couleur noir (#000000) avec aucun offset-x, un offset-y de 1px et un blur-radius de 4px */
+    /* Le texte est gras
+Deux ombres :
+une ombre de couleur noir (#000000) avec aucun offset et un blur-radius de 4px
+une ombre de couleur noir (#000000) avec aucun offset-x, un offset-y de 1px et un blur-radius de 4px */
 .number{
     color: white;
     align-content: right;
     align-self: center;
-   
     text-align: right;
     width: 20%;
-
     margin-left: 13%;
     font-size: 31px;
 } 
  
-
-
-
-
-                                        /* Au survol d’une tuile une ombre intérieure blanche (#ffffff) avec aucun offset, un blur-radius de 15px et un spread-radius de 3px.
-
-                                        Une transition douce entre les différents états (normal, survol, actif) est souhaitable.
-
-
-                                        */
+/* Au survol d’une tuile une ombre intérieure blanche (#ffffff) avec aucun offset, un blur-radius de 15px et un spread-radius de 3px.
+Une transition douce entre les différents états (normal, survol, actif) est souhaitable.
+*/
  
-
-
-
 .disabled {
-
 opacity: 0.5;
-
 }
 
 .disabled .cost {
 color: #ff6666;
 }
 
-
-
 .enabled .cost {
     color: #66ff66;
-    }
+}
